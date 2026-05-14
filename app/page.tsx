@@ -64,7 +64,7 @@ export default function Home() {
         <p className="hero-subtitle">Gestante &amp; Newborn — 2026</p>
         <div className="hero-divider"></div>
         <div style={{ marginTop: "32px", animation: "fadeIn 1s ease 1.8s both" }}>
-          <img src="/images/Eternize.svg" alt="Eternize" style={{ height: "64px", width: "auto" }} />
+          <img src="/images/Eternize.svg" alt="Eternize" style={{ height: "256px", width: "auto" }} />
         </div>
       </div>
 
@@ -378,7 +378,7 @@ export default function Home() {
         <a href="https://api.whatsapp.com/send?phone=5511986991295" target="_blank" className="cta-btn reveal">Reservar minha data</a>
         <p className="cta-signal reveal">R$100 de sinal · Restante no dia do ensaio · 12× sem juros</p>
         <div className="reveal" style={{ marginTop: "40px" }}>
-          <img src="/images/Eternize.svg" alt="Eternize" style={{ height: "48px", width: "auto" }} />
+          <img src="/images/Eternize.svg" alt="Eternize" style={{ height: "192px", width: "auto" }} />
         </div>
         <div className="footer-logo reveal" style={{ marginTop: "16px" }}>Eternize · Estúdio Fotográfico</div>
       </section>
