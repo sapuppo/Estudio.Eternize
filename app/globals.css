@@ -118,13 +118,12 @@ body {
 }
 
 .hero-badge {
-  position: absolute;
-  top: 48px;
-  right: 48px;
   border: 1px solid var(--border);
-  padding: 16px 24px;
+  padding: 16px 32px;
   text-align: center;
-  animation: fadeIn 1s ease 1.8s both;
+  animation: fadeIn 1s ease 0.5s both;
+  margin-bottom: 36px;
+  margin-top: 80px;
 }
 
 .hero-badge span {

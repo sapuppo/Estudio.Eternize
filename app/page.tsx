@@ -60,10 +60,12 @@ export default function Home() {
           <span>Promoção</span>
           <strong>Mês das Mães</strong>
         </div>
-        <div className="hero-eyebrow">Eternize Estúdio Fotográfico</div>
         <h1 className="hero-title">Registre<br /><em>cada</em><br />momento</h1>
         <p className="hero-subtitle">Gestante &amp; Newborn — 2026</p>
         <div className="hero-divider"></div>
+        <div style={{ marginTop: "32px", animation: "fadeIn 1s ease 1.8s both" }}>
+          <img src="/images/Eternize.svg" alt="Eternize" style={{ height: "64px", width: "auto" }} />
+        </div>
       </div>
 
       {/* GESTANTE PACKAGES */}
@@ -373,9 +375,12 @@ export default function Home() {
       <section className="footer-cta">
         <h2 className="cta-title reveal">Venha viver<br />essa experiência</h2>
         <p className="cta-sub reveal">Agende seu ensaio · Mês das Mães 2026</p>
-        <a href="#" className="cta-btn reveal">Reservar minha data</a>
+        <a href="https://api.whatsapp.com/send?phone=5511986991295" target="_blank" className="cta-btn reveal">Reservar minha data</a>
         <p className="cta-signal reveal">R$100 de sinal · Restante no dia do ensaio · 12× sem juros</p>
-        <img src="/images/Eternize.svg" alt="Eternize" className="reveal" style={{ height: "48px", width: "auto", marginTop: "80px" }} />
+        <div className="reveal" style={{ marginTop: "40px" }}>
+          <img src="/images/Eternize.svg" alt="Eternize" style={{ height: "48px", width: "auto" }} />
+        </div>
+        <div className="footer-logo reveal" style={{ marginTop: "16px" }}>Eternize · Estúdio Fotográfico</div>
       </section>
     </>
   );
