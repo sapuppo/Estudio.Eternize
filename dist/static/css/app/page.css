@@ -854,6 +854,19 @@ section {
   margin-top: 80px;
 }
 
+.footer-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: var(--gold);
+}
+
 /* NAV */
 nav {
   position: fixed;
