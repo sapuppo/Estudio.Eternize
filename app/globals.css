@@ -118,13 +118,13 @@ body {
 }
 
 .hero-badge {
-  position: absolute;
-  top: 48px;
-  right: 48px;
   border: 1px solid var(--border);
-  padding: 16px 24px;
+  padding: 16px 32px;
   text-align: center;
-  animation: fadeIn 1s ease 1.8s both;
+  animation: fadeIn 1s ease 0.5s both;
+  margin-bottom: 36px;
+  margin-top: 120px;
+  z-index: 10;
 }
 
 .hero-badge span {
@@ -347,6 +347,37 @@ section {
   transition: color 0.4s;
 }
 
+.pkg-signal {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 8px;
+  transition: color 0.4s;
+}
+
+.pkg-cta-btn {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 16px 24px;
+  background: var(--gold);
+  color: var(--dark);
+  font-family: 'Jost', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.pkg-cta-btn:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+}
+
 .pkg-highlight {
   position: absolute;
   top: 0;
@@ -497,11 +528,33 @@ section {
 }
 
 .combo-signal {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+.combo-cta-btn {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 16px 24px;
+  background: var(--gold);
+  color: var(--dark);
+  font-family: 'Jost', sans-serif;
   font-size: 10px;
-  color: rgba(154,143,133,0.5);
-  margin-top: 12px;
-  padding-top: 12px;
-  border-top: 1px solid rgba(255,255,255,0.04);
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.combo-cta-btn:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
 }
 
 /* ADICIONAIS */

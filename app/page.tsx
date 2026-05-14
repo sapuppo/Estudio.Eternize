@@ -40,12 +40,14 @@ export default function Home() {
   return (
     <>
       <nav className={scrolled ? "nav-scrolled" : ""}>
-        <img
-          src="/images/Eternize.svg"
-          alt="Eternize"
-          className="nav-logo-img"
-          style={{ height: scrolled ? "36px" : "56px" }}
-        />
+        <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
+          <img
+            src="/images/Eternize.svg"
+            alt="Eternize"
+            className="nav-logo-img"
+            style={{ height: scrolled ? "36px" : "56px", cursor: "pointer" }}
+          />
+        </a>
         <div className="nav-links">
           <a href="#gestante">Gestante</a>
           <a href="#combos">Combos</a>
@@ -60,10 +62,12 @@ export default function Home() {
           <span>Promoção</span>
           <strong>Mês das Mães</strong>
         </div>
-        <div className="hero-eyebrow">Eternize Estúdio Fotográfico</div>
         <h1 className="hero-title">Registre<br /><em>cada</em><br />momento</h1>
         <p className="hero-subtitle">Gestante &amp; Newborn — 2026</p>
         <div className="hero-divider"></div>
+        <div style={{ marginTop: "32px", animation: "fadeIn 1s ease 1.8s both" }}>
+          <img src="/images/Eternize.svg" alt="Eternize" style={{ height: "256px", width: "auto" }} />
+        </div>
       </div>
 
       {/* GESTANTE PACKAGES */}
@@ -95,7 +99,14 @@ export default function Home() {
             <span className="pkg-price-old">R$590</span>
             <div className="pkg-price-main">R$530</div>
             <div className="pkg-installment">em até 12× sem juros</div>
-            <div className="combo-signal" style={{ marginTop: "10px", paddingTop: "10px", borderTop: "1px solid var(--border)" }}>R$100 de sinal para reservar a data</div>
+            <div className="pkg-signal">R$100 de sinal para reservar</div>
+            <a 
+              href="https://api.whatsapp.com/send?phone=5511986991295&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20o%20pacote%20Cl%C3%A1ssico%20Gestante." 
+              target="_blank" 
+              className="pkg-cta-btn"
+            >
+              Quero este pacote
+            </a>
           </div>
 
           {/* DELUXE */}
@@ -114,7 +125,14 @@ export default function Home() {
             <span className="pkg-price-old">R$690</span>
             <div className="pkg-price-main">R$620</div>
             <div className="pkg-installment">em até 12× sem juros</div>
-            <div className="combo-signal" style={{ marginTop: "10px", paddingTop: "10px", borderTop: "1px solid var(--border)" }}>R$100 de sinal para reservar a data</div>
+            <div className="pkg-signal">R$100 de sinal para reservar</div>
+            <a 
+              href="https://api.whatsapp.com/send?phone=5511986991295&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20o%20pacote%20Deluxe%20Gestante." 
+              target="_blank" 
+              className="pkg-cta-btn"
+            >
+              Quero este pacote
+            </a>
           </div>
 
           {/* PREMIUM */}
@@ -134,7 +152,14 @@ export default function Home() {
             <span className="pkg-price-old">R$990</span>
             <div className="pkg-price-main">R$890</div>
             <div className="pkg-installment">em até 12× sem juros</div>
-            <div className="combo-signal" style={{ marginTop: "10px", paddingTop: "10px", borderTop: "1px solid var(--border)" }}>R$100 de sinal para reservar a data</div>
+            <div className="pkg-signal">R$100 de sinal para reservar</div>
+            <a 
+              href="https://api.whatsapp.com/send?phone=5511986991295&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20o%20pacote%20Premium%20Gestante." 
+              target="_blank" 
+              className="pkg-cta-btn"
+            >
+              Quero este pacote
+            </a>
           </div>
         </div>
       </section>
@@ -182,14 +207,21 @@ export default function Home() {
               <div className="combo-price-old">R$1.440</div>
               <div className="combo-price">R$1.290</div>
               <div className="combo-installment">em até 12× sem juros</div>
-              <div className="combo-signal">R$100 de sinal para reservar a data</div>
+              <div className="combo-signal">R$100 de sinal para reservar</div>
+              <a 
+                href="https://api.whatsapp.com/send?phone=5511986991295&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20o%20Combo%20Eternize%20(Gestante%20%2B%20Newborn)." 
+                target="_blank" 
+                className="combo-cta-btn"
+              >
+                Quero este combo
+              </a>
             </div>
           </div>
 
           {/* COMBO LUXO */}
           <div className="combo-card featured reveal">
             <div className="combo-badge">Luxo</div>
-            <div className="combo-name">Eternize<br />Luxo</div>
+            <div className="combo-name">Eternize Luxo</div>
             <div className="combo-sub">Experiência premium</div>
 
             <div className="combo-cols">
@@ -217,7 +249,14 @@ export default function Home() {
               <div className="combo-price-old">R$2.690</div>
               <div className="combo-price">R$2.280</div>
               <div className="combo-installment">em até 12× sem juros</div>
-              <div className="combo-signal">R$100 de sinal para reservar a data</div>
+              <div className="combo-signal">R$100 de sinal para reservar</div>
+              <a 
+                href="https://api.whatsapp.com/send?phone=5511986991295&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20o%20Combo%20Eternize%20Luxo%20(Gestante%20%2B%20Newborn)." 
+                target="_blank" 
+                className="combo-cta-btn"
+              >
+                Quero este combo
+              </a>
             </div>
           </div>
         </div>
@@ -373,9 +412,12 @@ export default function Home() {
       <section className="footer-cta">
         <h2 className="cta-title reveal">Venha viver<br />essa experiência</h2>
         <p className="cta-sub reveal">Agende seu ensaio · Mês das Mães 2026</p>
-        <a href="#" className="cta-btn reveal">Reservar minha data</a>
+        <a href="https://api.whatsapp.com/send?phone=5511986991295" target="_blank" className="cta-btn reveal">Reservar minha data</a>
         <p className="cta-signal reveal">R$100 de sinal · Restante no dia do ensaio · 12× sem juros</p>
-        <img src="/images/Eternize.svg" alt="Eternize" className="reveal" style={{ height: "48px", width: "auto", marginTop: "80px" }} />
+        <div className="reveal" style={{ marginTop: "40px" }}>
+          <img src="/images/Eternize.svg" alt="Eternize" style={{ height: "192px", width: "auto" }} />
+        </div>
+        <div className="footer-logo reveal" style={{ marginTop: "16px" }}>Eternize · Estúdio Fotográfico</div>
       </section>
     </>
   );
