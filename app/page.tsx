@@ -233,7 +233,7 @@ export default function Home() {
           {/* COMBO LUXO */}
           <div className="combo-card featured reveal">
             <div className="combo-badge">Luxo</div>
-            <div className="combo-name">Eternize<br />Luxo</div>
+            <div className="combo-name">Eternize Luxo</div>
             <div className="combo-sub">Experiência premium</div>
 
             <div className="combo-cols">
