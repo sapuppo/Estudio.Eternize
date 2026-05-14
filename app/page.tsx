@@ -40,12 +40,14 @@ export default function Home() {
   return (
     <>
       <nav className={scrolled ? "nav-scrolled" : ""}>
-        <img
-          src="/images/Eternize.svg"
-          alt="Eternize"
-          className="nav-logo-img"
-          style={{ height: scrolled ? "36px" : "56px" }}
-        />
+        <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
+          <img
+            src="/images/Eternize.svg"
+            alt="Eternize"
+            className="nav-logo-img"
+            style={{ height: scrolled ? "36px" : "56px", cursor: "pointer" }}
+          />
+        </a>
         <div className="nav-links">
           <a href="#gestante">Gestante</a>
           <a href="#combos">Combos</a>
@@ -97,7 +99,17 @@ export default function Home() {
             <span className="pkg-price-old">R$590</span>
             <div className="pkg-price-main">R$530</div>
             <div className="pkg-installment">em até 12× sem juros</div>
-            <div className="combo-signal" style={{ marginTop: "10px", paddingTop: "10px", borderTop: "1px solid var(--border)" }}>R$100 de sinal para reservar a data</div>
+            <div className="pkg-signal-highlight">
+              <span className="signal-icon">✦</span>
+              <span>R$100 de sinal para reservar</span>
+            </div>
+            <a 
+              href="https://api.whatsapp.com/send?phone=5511986991295&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20o%20pacote%20Cl%C3%A1ssico%20Gestante." 
+              target="_blank" 
+              className="pkg-cta-btn"
+            >
+              Quero este pacote
+            </a>
           </div>
 
           {/* DELUXE */}
@@ -116,7 +128,17 @@ export default function Home() {
             <span className="pkg-price-old">R$690</span>
             <div className="pkg-price-main">R$620</div>
             <div className="pkg-installment">em até 12× sem juros</div>
-            <div className="combo-signal" style={{ marginTop: "10px", paddingTop: "10px", borderTop: "1px solid var(--border)" }}>R$100 de sinal para reservar a data</div>
+            <div className="pkg-signal-highlight">
+              <span className="signal-icon">✦</span>
+              <span>R$100 de sinal para reservar</span>
+            </div>
+            <a 
+              href="https://api.whatsapp.com/send?phone=5511986991295&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20o%20pacote%20Deluxe%20Gestante." 
+              target="_blank" 
+              className="pkg-cta-btn"
+            >
+              Quero este pacote
+            </a>
           </div>
 
           {/* PREMIUM */}
@@ -136,7 +158,17 @@ export default function Home() {
             <span className="pkg-price-old">R$990</span>
             <div className="pkg-price-main">R$890</div>
             <div className="pkg-installment">em até 12× sem juros</div>
-            <div className="combo-signal" style={{ marginTop: "10px", paddingTop: "10px", borderTop: "1px solid var(--border)" }}>R$100 de sinal para reservar a data</div>
+            <div className="pkg-signal-highlight">
+              <span className="signal-icon">✦</span>
+              <span>R$100 de sinal para reservar</span>
+            </div>
+            <a 
+              href="https://api.whatsapp.com/send?phone=5511986991295&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20o%20pacote%20Premium%20Gestante." 
+              target="_blank" 
+              className="pkg-cta-btn"
+            >
+              Quero este pacote
+            </a>
           </div>
         </div>
       </section>
@@ -184,7 +216,17 @@ export default function Home() {
               <div className="combo-price-old">R$1.440</div>
               <div className="combo-price">R$1.290</div>
               <div className="combo-installment">em até 12× sem juros</div>
-              <div className="combo-signal">R$100 de sinal para reservar a data</div>
+              <div className="combo-signal-highlight">
+                <span className="signal-icon">✦</span>
+                <span>R$100 de sinal para reservar</span>
+              </div>
+              <a 
+                href="https://api.whatsapp.com/send?phone=5511986991295&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20o%20Combo%20Eternize%20(Gestante%20%2B%20Newborn)." 
+                target="_blank" 
+                className="combo-cta-btn"
+              >
+                Quero este combo
+              </a>
             </div>
           </div>
 
@@ -219,7 +261,17 @@ export default function Home() {
               <div className="combo-price-old">R$2.690</div>
               <div className="combo-price">R$2.280</div>
               <div className="combo-installment">em até 12× sem juros</div>
-              <div className="combo-signal">R$100 de sinal para reservar a data</div>
+              <div className="combo-signal-highlight">
+                <span className="signal-icon">✦</span>
+                <span>R$100 de sinal para reservar</span>
+              </div>
+              <a 
+                href="https://api.whatsapp.com/send?phone=5511986991295&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20o%20Combo%20Eternize%20Luxo%20(Gestante%20%2B%20Newborn)." 
+                target="_blank" 
+                className="combo-cta-btn"
+              >
+                Quero este combo
+              </a>
             </div>
           </div>
         </div>
