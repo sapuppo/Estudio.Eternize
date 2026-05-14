@@ -435,7 +435,7 @@ export default function Home() {
           </a>
           
           <a 
-            href="https://maps.google.com/?q=R.+Três+Mosqueteiros,+153+-+Vila+Caminho+do+Mar,+São+Bernardo+do+Campo+-+SP,+09619-160" 
+            href="https://maps.google.com/?q=Estudio+Eternize+São+Bernardo+do+Campo" 
             target="_blank" 
             className="footer-link"
             style={{ display: "flex", alignItems: "center", gap: "8px", color: "var(--muted)", textDecoration: "none", transition: "color 0.3s", textAlign: "center" }}
