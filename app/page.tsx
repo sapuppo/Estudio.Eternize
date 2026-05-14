@@ -99,10 +99,7 @@ export default function Home() {
             <span className="pkg-price-old">R$590</span>
             <div className="pkg-price-main">R$530</div>
             <div className="pkg-installment">em até 12× sem juros</div>
-            <div className="pkg-signal-highlight">
-              <span className="signal-icon">✦</span>
-              <span>R$100 de sinal para reservar</span>
-            </div>
+            <div className="pkg-signal">R$100 de sinal para reservar</div>
             <a 
               href="https://api.whatsapp.com/send?phone=5511986991295&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20o%20pacote%20Cl%C3%A1ssico%20Gestante." 
               target="_blank" 
@@ -128,10 +125,7 @@ export default function Home() {
             <span className="pkg-price-old">R$690</span>
             <div className="pkg-price-main">R$620</div>
             <div className="pkg-installment">em até 12× sem juros</div>
-            <div className="pkg-signal-highlight">
-              <span className="signal-icon">✦</span>
-              <span>R$100 de sinal para reservar</span>
-            </div>
+            <div className="pkg-signal">R$100 de sinal para reservar</div>
             <a 
               href="https://api.whatsapp.com/send?phone=5511986991295&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20o%20pacote%20Deluxe%20Gestante." 
               target="_blank" 
@@ -158,10 +152,7 @@ export default function Home() {
             <span className="pkg-price-old">R$990</span>
             <div className="pkg-price-main">R$890</div>
             <div className="pkg-installment">em até 12× sem juros</div>
-            <div className="pkg-signal-highlight">
-              <span className="signal-icon">✦</span>
-              <span>R$100 de sinal para reservar</span>
-            </div>
+            <div className="pkg-signal">R$100 de sinal para reservar</div>
             <a 
               href="https://api.whatsapp.com/send?phone=5511986991295&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20o%20pacote%20Premium%20Gestante." 
               target="_blank" 
@@ -216,10 +207,7 @@ export default function Home() {
               <div className="combo-price-old">R$1.440</div>
               <div className="combo-price">R$1.290</div>
               <div className="combo-installment">em até 12× sem juros</div>
-              <div className="combo-signal-highlight">
-                <span className="signal-icon">✦</span>
-                <span>R$100 de sinal para reservar</span>
-              </div>
+              <div className="combo-signal">R$100 de sinal para reservar</div>
               <a 
                 href="https://api.whatsapp.com/send?phone=5511986991295&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20o%20Combo%20Eternize%20(Gestante%20%2B%20Newborn)." 
                 target="_blank" 
@@ -261,10 +249,7 @@ export default function Home() {
               <div className="combo-price-old">R$2.690</div>
               <div className="combo-price">R$2.280</div>
               <div className="combo-installment">em até 12× sem juros</div>
-              <div className="combo-signal-highlight">
-                <span className="signal-icon">✦</span>
-                <span>R$100 de sinal para reservar</span>
-              </div>
+              <div className="combo-signal">R$100 de sinal para reservar</div>
               <a 
                 href="https://api.whatsapp.com/send?phone=5511986991295&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20o%20Combo%20Eternize%20Luxo%20(Gestante%20%2B%20Newborn)." 
                 target="_blank" 

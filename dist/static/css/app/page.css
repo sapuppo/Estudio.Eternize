@@ -351,29 +351,11 @@ section {
   transition: color 0.4s;
 }
 
-.pkg-signal-highlight {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 16px;
-  padding: 12px 16px;
-  background: rgba(201,169,110,0.08);
-  border: 1px solid rgba(201,169,110,0.2);
-  border-radius: 4px;
+.pkg-signal {
   font-size: 11px;
-  color: var(--gold);
-  transition: background 0.4s, border-color 0.4s;
-}
-
-.package-card:hover .pkg-signal-highlight {
-  background: rgba(201,169,110,0.15);
-  border-color: rgba(201,169,110,0.3);
-}
-
-.signal-icon {
-  font-size: 10px;
-  animation: shimmer 2s ease infinite;
+  color: var(--muted);
+  margin-top: 8px;
+  transition: color 0.4s;
 }
 
 .pkg-cta-btn {
@@ -552,25 +534,9 @@ section {
 }
 
 .combo-signal {
-  font-size: 10px;
-  color: rgba(154,143,133,0.5);
-  margin-top: 12px;
-  padding-top: 12px;
-  border-top: 1px solid rgba(255,255,255,0.04);
-}
-
-.combo-signal-highlight {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 16px;
-  padding: 12px 16px;
-  background: rgba(201,169,110,0.1);
-  border: 1px solid rgba(201,169,110,0.25);
-  border-radius: 4px;
   font-size: 11px;
-  color: var(--gold);
+  color: var(--muted);
+  margin-top: 8px;
 }
 
 .combo-cta-btn {
