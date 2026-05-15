@@ -3,6 +3,7 @@
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import PageWrapper from "@/components/PageWrapper";
+import PortfolioCarousel, { smashImages } from "@/components/PortfolioCarousel";
 
 export default function SmashPage() {
   return (
@@ -18,6 +19,13 @@ export default function SmashPage() {
           <img src="/images/Eternize.svg" alt="Eternize" style={{ height: "120px", width: "auto" }} />
         </div>
       </div>
+
+      {/* PORTFOLIO CAROUSEL */}
+      <PortfolioCarousel 
+        title="Nosso Portfólio" 
+        subtitle="Smash the Cake" 
+        images={smashImages} 
+      />
 
       {/* SMASH PACKAGES */}
       <section className="packages-section">
