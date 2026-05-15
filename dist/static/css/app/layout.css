@@ -687,6 +687,14 @@ section {
   border: 1px solid rgba(201,169,110,0.2);
   padding: 56px 44px;
   position: relative;
+  background: transparent;
+  transition: all 0.4s ease;
+}
+
+.combo-card:hover {
+  background: rgba(201,169,110,0.08);
+  border-color: var(--gold);
+  transform: translateY(-4px);
 }
 
 .combo-card.featured {
