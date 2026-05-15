@@ -229,7 +229,7 @@ body {
   font-size: clamp(72px, 12vw, 140px);
   color: var(--warm-white);
   letter-spacing: -0.02em;
-  line-height: 0.70;
+  line-height: 0.9;
   text-align: center;
   animation: fadeUp 1.2s ease 0.5s both;
 }
@@ -998,7 +998,7 @@ section {
 }
 
 .editing-list li::before {
-  content: '✦';
+  content: '��';
   color: var(--gold);
   font-size: 8px;
   margin-top: 3px;
