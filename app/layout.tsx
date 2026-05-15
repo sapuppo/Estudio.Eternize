@@ -1,3 +1,5 @@
+import "./globals.css";
+
 export const metadata = {
   title: "Eternize Estúdio — Mês das Mães",
   description: "Eternize Estúdio Fotográfico - Gestante & Newborn 2026",
