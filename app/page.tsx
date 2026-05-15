@@ -5,6 +5,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import PageWrapper from "@/components/PageWrapper";
 import PortfolioCarousel from "@/components/PortfolioCarousel";
+import ImageCompare from "@/components/ImageCompare";
 
 export default function Home() {
   const ensaios = [
@@ -86,22 +87,18 @@ export default function Home() {
           </div>
 
           <div className="editing-visual reveal">
-            <div className="edit-box photo-box">
-              <img src="/images/antes.jpg" alt="Antes" />
-              <span className="photo-label">Antes</span>
-            </div>
-            <div className="edit-box photo-box">
-              <img src="/images/depois.jpg" alt="Depois" />
-              <span className="photo-label gold">Depois</span>
-            </div>
-            <div className="edit-box photo-box">
-              <img src="/images/autentico.jpg" alt="Autêntico" />
-              <span className="photo-label">Autêntico</span>
-            </div>
-            <div className="edit-box photo-box">
-              <img src="/images/natural.jpg" alt="Natural" />
-              <span className="photo-label gold">Natural</span>
-            </div>
+            <ImageCompare 
+              beforeImage="/images/antes.jpg"
+              afterImage="/images/depois.jpg"
+              beforeLabel="Antes"
+              afterLabel="Depois"
+            />
+            <ImageCompare 
+              beforeImage="/images/autentico.jpg"
+              afterImage="/images/natural.jpg"
+              beforeLabel="Original"
+              afterLabel="Editada"
+            />
           </div>
         </div>
       </section>
