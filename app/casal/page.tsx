@@ -14,6 +14,9 @@ export default function CasalPage() {
         <h1 className="hero-title">Ensaio<br /><em>Casal</em></h1>
         <p className="hero-subtitle">Eternize o amor de vocês</p>
         <div className="hero-divider"></div>
+        <div style={{ marginTop: "32px", animation: "fadeIn 1s ease 1.2s both" }}>
+          <img src="/images/Eternize.svg" alt="Eternize" style={{ height: "120px", width: "auto" }} />
+        </div>
       </div>
 
       {/* CASAL PACKAGES */}

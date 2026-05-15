@@ -18,6 +18,23 @@ export default function Home() {
     { name: "Profissional", href: "/profissional", desc: "Posicionamento de imagem" },
   ];
 
+  const portfolioImages = [
+    "/images/portfolio/gestante-1.jpg",
+    "/images/portfolio/gestante-2.jpg",
+    "/images/portfolio/gestante-3.jpg",
+    "/images/portfolio/gestante-4.jpg",
+    "/images/portfolio/gestante-5.jpg",
+    "/images/portfolio/gestante-6.jpg",
+    "/images/portfolio/gestante-7.jpg",
+    "/images/portfolio/gestante-8.jpg",
+    "/images/portfolio/gestante-9.jpg",
+    "/images/portfolio/gestante-10.jpg",
+    "/images/portfolio/gestante-11.jpg",
+    "/images/portfolio/gestante-12.jpg",
+    "/images/portfolio/gestante-13.jpg",
+    "/images/portfolio/gestante-14.jpg",
+  ];
+
   return (
     <PageWrapper>
       <Nav />
@@ -35,6 +52,30 @@ export default function Home() {
           <img src="/images/Eternize.svg" alt="Eternize" style={{ height: "256px", width: "auto" }} />
         </div>
       </div>
+
+      {/* PORTFOLIO CAROUSEL */}
+      <section className="portfolio-section">
+        <div className="portfolio-header reveal">
+          <div className="section-label" style={{ color: "var(--gold)" }}>Nosso trabalho</div>
+          <h2 className="section-title" style={{ color: "var(--warm-white)" }}>Portfólio Gestante</h2>
+        </div>
+        
+        <div className="portfolio-carousel">
+          <div className="portfolio-track">
+            {portfolioImages.map((img, index) => (
+              <div key={index} className="portfolio-item">
+                <img src={img} alt={`Ensaio Gestante ${index + 1}`} />
+              </div>
+            ))}
+            {/* Duplicate for infinite scroll effect */}
+            {portfolioImages.map((img, index) => (
+              <div key={`dup-${index}`} className="portfolio-item">
+                <img src={img} alt={`Ensaio Gestante ${index + 1}`} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ENSAIOS GRID */}
       <section className="packages-section">
@@ -60,36 +101,6 @@ export default function Home() {
               </div>
             </Link>
           ))}
-        </div>
-      </section>
-
-      {/* DESTAQUE PROMOÇÃO */}
-      <section className="combo-section">
-        <div className="section-tag-row reveal">
-          <div className="tag">Promoção Mês das Mães</div>
-          <div className="line"></div>
-        </div>
-
-        <div className="reveal" style={{ marginBottom: "12px" }}>
-          <div className="section-label" style={{ color: "var(--gold)" }}>Combos especiais</div>
-        </div>
-        <h2 className="section-title reveal" style={{ color: "var(--warm-white)" }}>Gestante<br /><em style={{ fontStyle: "italic", color: "var(--gold)" }}>+ Newborn</em></h2>
-        
-        <p className="reveal" style={{ 
-          maxWidth: "500px", 
-          margin: "32px auto 48px", 
-          textAlign: "center", 
-          fontSize: "14px", 
-          color: "var(--muted)", 
-          lineHeight: "1.8" 
-        }}>
-          Aproveite condições especiais para registrar toda a jornada: da gestação aos primeiros dias do bebê.
-        </p>
-
-        <div className="reveal" style={{ textAlign: "center" }}>
-          <Link href="/combos" className="cta-btn">
-            Ver Combos Especiais
-          </Link>
         </div>
       </section>
 

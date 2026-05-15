@@ -14,6 +14,9 @@ export default function SmashPage() {
         <h1 className="hero-title">Smash<br /><em>the Cake</em></h1>
         <p className="hero-subtitle">O primeiro aniversário cheio de doçura</p>
         <div className="hero-divider"></div>
+        <div style={{ marginTop: "32px", animation: "fadeIn 1s ease 1.2s both" }}>
+          <img src="/images/Eternize.svg" alt="Eternize" style={{ height: "120px", width: "auto" }} />
+        </div>
       </div>
 
       {/* SMASH PACKAGES */}

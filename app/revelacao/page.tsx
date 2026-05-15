@@ -14,16 +14,10 @@ export default function RevelacaoPage() {
         <h1 className="hero-title">Ensaio<br /><em>Revelação</em></h1>
         <p className="hero-subtitle">Descubra o sexo do bebê de forma inesquecível</p>
         <div className="hero-divider"></div>
-      </div>
-
-      {/* GALERIA */}
-      <section className="gallery-section">
-        <div className="gallery-scroll">
-          <div className="gallery-item">
-            <img src="/images/revelacao.png" alt="Ensaio Revelação" />
-          </div>
+        <div style={{ marginTop: "32px", animation: "fadeIn 1s ease 1.2s both" }}>
+          <img src="/images/Eternize.svg" alt="Eternize" style={{ height: "120px", width: "auto" }} />
         </div>
-      </section>
+      </div>
 
       {/* REVELACAO PACKAGES */}
       <section className="packages-section">

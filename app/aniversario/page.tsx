@@ -14,6 +14,9 @@ export default function AniversarioPage() {
         <h1 className="hero-title">Ensaio<br /><em>Aniversário</em></h1>
         <p className="hero-subtitle">Celebre sua data especial com fotos inesquecíveis</p>
         <div className="hero-divider"></div>
+        <div style={{ marginTop: "32px", animation: "fadeIn 1s ease 1.2s both" }}>
+          <img src="/images/Eternize.svg" alt="Eternize" style={{ height: "120px", width: "auto" }} />
+        </div>
       </div>
 
       {/* ANIVERSARIO PACKAGES */}

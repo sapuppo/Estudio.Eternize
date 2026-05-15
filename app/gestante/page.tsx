@@ -18,22 +18,10 @@ export default function GestantePage() {
         <h1 className="hero-title">Ensaio<br /><em>Gestante</em></h1>
         <p className="hero-subtitle">Eternize cada momento da sua gestação</p>
         <div className="hero-divider"></div>
-      </div>
-
-      {/* GALERIA MOBILE-FRIENDLY */}
-      <section className="gallery-section">
-        <div className="gallery-scroll">
-          <div className="gallery-item">
-            <img src="/images/Foto-221.jpg" alt="Ensaio Gestante 1" />
-          </div>
-          <div className="gallery-item">
-            <img src="/images/natural.jpg" alt="Ensaio Gestante 2" />
-          </div>
-          <div className="gallery-item">
-            <img src="/images/autentico.jpg" alt="Ensaio Gestante 3" />
-          </div>
+        <div style={{ marginTop: "32px", animation: "fadeIn 1s ease 1.2s both" }}>
+          <img src="/images/Eternize.svg" alt="Eternize" style={{ height: "120px", width: "auto" }} />
         </div>
-      </section>
+      </div>
 
       {/* GESTANTE PACKAGES */}
       <section className="packages-section">

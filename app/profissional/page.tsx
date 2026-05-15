@@ -14,6 +14,9 @@ export default function ProfissionalPage() {
         <h1 className="hero-title">Ensaio<br /><em>Profissional</em></h1>
         <p className="hero-subtitle">Posicionamento de imagem para sua marca pessoal</p>
         <div className="hero-divider"></div>
+        <div style={{ marginTop: "32px", animation: "fadeIn 1s ease 1.2s both" }}>
+          <img src="/images/Eternize.svg" alt="Eternize" style={{ height: "120px", width: "auto" }} />
+        </div>
       </div>
 
       {/* PROFISSIONAL PACKAGES */}

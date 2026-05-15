@@ -14,9 +14,12 @@ export default function FamiliaPage() {
         <h1 className="hero-title">Ensaio<br /><em>Família</em></h1>
         <p className="hero-subtitle">Momentos em família eternizados</p>
         <div className="hero-divider"></div>
+        <div style={{ marginTop: "32px", animation: "fadeIn 1s ease 1.2s both" }}>
+          <img src="/images/Eternize.svg" alt="Eternize" style={{ height: "120px", width: "auto" }} />
+        </div>
       </div>
 
-      {/* FAMILIA INFO */}
+      {/* FAMILIA PACKAGES */}
       <section className="packages-section">
         <div className="packages-header reveal">
           <div>
@@ -24,43 +27,86 @@ export default function FamiliaPage() {
             <h2 className="section-title">Família</h2>
           </div>
           <p className="packages-desc">
-            Registre momentos especiais com quem você mais ama. Ensaios personalizados para toda a família.
+            Registre momentos especiais com quem você mais ama. Cada ensaio inclui direcionamento de poses e edição refinada.
           </p>
         </div>
 
-        {/* CTA para contato */}
-        <div className="reveal" style={{ textAlign: "center", marginTop: "48px" }}>
-          <div style={{ 
-            padding: "48px", 
-            border: "1px solid var(--border)", 
-            maxWidth: "600px", 
-            margin: "0 auto",
-            background: "rgba(201,169,110,0.03)"
-          }}>
-            <h3 style={{ 
-              fontFamily: "'Cormorant Garamond', serif", 
-              fontSize: "28px", 
-              fontWeight: 300, 
-              color: "var(--dark)",
-              marginBottom: "16px"
-            }}>
-              Ensaio Personalizado
-            </h3>
-            <p style={{ 
-              fontSize: "13px", 
-              color: "var(--muted)", 
-              lineHeight: "1.8",
-              marginBottom: "32px"
-            }}>
-              Cada família é única! Entre em contato para criarmos um pacote personalizado que atenda às suas necessidades e expectativas.
-            </p>
+        <div className="packages-grid">
+          {/* FAMÍLIA ESSENCIAL */}
+          <div className="package-card reveal">
+            <div className="pkg-tag">Pacote 01</div>
+            <div className="pkg-name">Família Essencial</div>
+            <div className="pkg-line"></div>
+            <ul className="pkg-features">
+              <li className="pkg-feature">15 Fotos digitais editadas</li>
+              <li className="pkg-feature">1 Cenário</li>
+              <li className="pkg-feature">Até 4 participantes</li>
+              <li className="pkg-feature">Direcionamento de poses</li>
+              <li className="pkg-feature">Edição refinada completa</li>
+            </ul>
+            <div className="pkg-price-main">R$490</div>
+            <div className="pkg-installment">em até 12× sem juros</div>
+            <div className="pkg-signal">R$100 de sinal para reservar</div>
             <a 
-              href="https://api.whatsapp.com/send?phone=5511986991295&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Ensaio%20Fam%C3%ADlia." 
+              href="https://api.whatsapp.com/send?phone=5511986991295&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20o%20pacote%20Fam%C3%ADlia%20Essencial." 
               target="_blank" 
               className="pkg-cta-btn"
-              style={{ display: "inline-block", width: "auto", padding: "16px 48px" }}
             >
-              Solicitar Orçamento
+              Quero este pacote
+            </a>
+          </div>
+
+          {/* FAMÍLIA COMPLETA */}
+          <div className="package-card reveal">
+            <div className="pkg-highlight">Mais escolhido</div>
+            <div className="pkg-tag">Pacote 02</div>
+            <div className="pkg-name">Família Completa</div>
+            <div className="pkg-line"></div>
+            <ul className="pkg-features">
+              <li className="pkg-feature">20 Fotos digitais editadas</li>
+              <li className="pkg-feature">2 Cenários</li>
+              <li className="pkg-feature">Até 6 participantes</li>
+              <li className="pkg-feature">Maquiagem profissional</li>
+              <li className="pkg-feature">Modelagem de cabelo</li>
+              <li className="pkg-feature">Direcionamento de poses</li>
+              <li className="pkg-feature">Edição refinada completa</li>
+            </ul>
+            <div className="pkg-price-main">R$790</div>
+            <div className="pkg-installment">em até 12× sem juros</div>
+            <div className="pkg-signal">R$100 de sinal para reservar</div>
+            <a 
+              href="https://api.whatsapp.com/send?phone=5511986991295&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20o%20pacote%20Fam%C3%ADlia%20Completa." 
+              target="_blank" 
+              className="pkg-cta-btn"
+            >
+              Quero este pacote
+            </a>
+          </div>
+
+          {/* FAMÍLIA PREMIUM */}
+          <div className="package-card reveal">
+            <div className="pkg-tag">Pacote 03</div>
+            <div className="pkg-name">Família Premium</div>
+            <div className="pkg-line"></div>
+            <ul className="pkg-features">
+              <li className="pkg-feature">30 Fotos digitais editadas</li>
+              <li className="pkg-feature">3 Cenários</li>
+              <li className="pkg-feature">Até 8 participantes</li>
+              <li className="pkg-feature">Maquiagem profissional</li>
+              <li className="pkg-feature">Modelagem de cabelo</li>
+              <li className="pkg-feature">Álbum Luxo incluso</li>
+              <li className="pkg-feature">Direcionamento de poses</li>
+              <li className="pkg-feature">Edição refinada completa</li>
+            </ul>
+            <div className="pkg-price-main">R$1.490</div>
+            <div className="pkg-installment">em até 12× sem juros</div>
+            <div className="pkg-signal">R$100 de sinal para reservar</div>
+            <a 
+              href="https://api.whatsapp.com/send?phone=5511986991295&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20o%20pacote%20Fam%C3%ADlia%20Premium." 
+              target="_blank" 
+              className="pkg-cta-btn"
+            >
+              Quero este pacote
             </a>
           </div>
         </div>
@@ -79,7 +125,7 @@ export default function FamiliaPage() {
             <span className="extra-price">+R$60</span>
           </div>
           <div className="extra-item reveal">
-            <span className="extra-name">Acompanhante extra</span>
+            <span className="extra-name">Participante extra (acima do limite)</span>
             <span className="extra-price">+R$50</span>
           </div>
           <div className="extra-item reveal">
@@ -93,52 +139,6 @@ export default function FamiliaPage() {
           <div className="extra-item reveal">
             <span className="extra-name">Edição refinada em acompanhantes</span>
             <span className="extra-price">+R$10/foto</span>
-          </div>
-        </div>
-      </section>
-
-      {/* O QUE OFERECEMOS */}
-      <section className="policies-section">
-        <div className="reveal">
-          <div className="section-label" style={{ color: "var(--gold)" }}>O que oferecemos</div>
-          <h2 className="section-title" style={{ color: "var(--warm-white)" }}>Nossos ensaios incluem</h2>
-        </div>
-
-        <div className="policies-grid">
-          <div className="policy-card reveal">
-            <div className="policy-icon">📸</div>
-            <div className="policy-title">Fotos Profissionais</div>
-            <p className="policy-text">Fotos digitais editadas com alta qualidade e direcionamento de poses para toda a família.</p>
-          </div>
-
-          <div className="policy-card reveal">
-            <div className="policy-icon">🎨</div>
-            <div className="policy-title">Cenários Variados</div>
-            <p className="policy-text">Diversos cenários disponíveis para criar composições únicas e memoráveis.</p>
-          </div>
-
-          <div className="policy-card reveal">
-            <div className="policy-icon">💄</div>
-            <div className="policy-title">Produção</div>
-            <p className="policy-text">Opção de maquiagem profissional e produção de cabelo para deixar todos ainda mais bonitos.</p>
-          </div>
-
-          <div className="policy-card reveal">
-            <div className="policy-icon">✨</div>
-            <div className="policy-title">Edição Refinada</div>
-            <p className="policy-text">Tratamento profissional das fotos com correção de iluminação e retoques sutis.</p>
-          </div>
-
-          <div className="policy-card reveal">
-            <div className="policy-icon">🐾</div>
-            <div className="policy-title">Pets Bem-vindos</div>
-            <p className="policy-text">Seu pet faz parte da família! Aceitamos animais de pequeno porte até 5kg.</p>
-          </div>
-
-          <div className="policy-card reveal">
-            <div className="policy-icon">📖</div>
-            <div className="policy-title">Produtos Físicos</div>
-            <p className="policy-text">Opção de álbuns luxuosos e fotos reveladas para guardar suas memórias.</p>
           </div>
         </div>
       </section>
