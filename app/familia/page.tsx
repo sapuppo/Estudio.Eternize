@@ -23,7 +23,7 @@ export default function FamiliaPage() {
             <div className="section-label">Pacotes de Ensaio</div>
             <h2 className="section-title">Família</h2>
           </div>
-          <p style={{ maxWidth: "360px", fontSize: "13px", color: "var(--muted)", lineHeight: "1.8" }}>
+          <p className="packages-desc">
             Registre momentos especiais com quem você mais ama. Ensaios personalizados para toda a família.
           </p>
         </div>
@@ -62,6 +62,37 @@ export default function FamiliaPage() {
             >
               Solicitar Orçamento
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ADICIONAIS */}
+      <section className="extras-section">
+        <div className="reveal">
+          <div className="section-label">Personalize</div>
+          <h2 className="section-title">Adicionais</h2>
+        </div>
+
+        <div className="extras-list" style={{ maxWidth: "600px", margin: "48px auto 0" }}>
+          <div className="extra-item reveal">
+            <span className="extra-name">Finais de semana e feriados</span>
+            <span className="extra-price">+R$60</span>
+          </div>
+          <div className="extra-item reveal">
+            <span className="extra-name">Acompanhante extra</span>
+            <span className="extra-price">+R$50</span>
+          </div>
+          <div className="extra-item reveal">
+            <span className="extra-name">Pet pequeno porte (até 5kg)</span>
+            <span className="extra-price">+R$80</span>
+          </div>
+          <div className="extra-item reveal">
+            <span className="extra-name">Foto extra</span>
+            <span className="extra-price">+R$20</span>
+          </div>
+          <div className="extra-item reveal">
+            <span className="extra-name">Edição refinada em acompanhantes</span>
+            <span className="extra-price">+R$10/foto</span>
           </div>
         </div>
       </section>

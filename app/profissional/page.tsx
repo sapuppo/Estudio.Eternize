@@ -16,6 +16,15 @@ export default function ProfissionalPage() {
         <div className="hero-divider"></div>
       </div>
 
+      {/* GALERIA */}
+      <section className="gallery-section">
+        <div className="gallery-scroll">
+          <div className="gallery-item">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Ensaio%20Profissional-eJRkusbhSGdSQEz5ERk3gnFqG03fbc-cGPnDYYuYKhRPp9BwWiYiMKKKNJPnP.png" alt="Ensaio Profissional" />
+          </div>
+        </div>
+      </section>
+
       {/* PROFISSIONAL PACKAGES */}
       <section className="packages-section">
         <div className="packages-header reveal">
@@ -23,7 +32,7 @@ export default function ProfissionalPage() {
             <div className="section-label">Pacotes de Ensaio</div>
             <h2 className="section-title">Profissional</h2>
           </div>
-          <p style={{ maxWidth: "360px", fontSize: "13px", color: "var(--muted)", lineHeight: "1.8" }}>
+          <p className="packages-desc">
             Um ensaio fotográfico pode mudar o rumo da sua empresa. Invista na imagem certa!
           </p>
         </div>
@@ -76,6 +85,33 @@ export default function ProfissionalPage() {
             >
               Quero este pacote
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ADICIONAIS */}
+      <section className="extras-section">
+        <div className="reveal">
+          <div className="section-label">Personalize</div>
+          <h2 className="section-title">Adicionais</h2>
+        </div>
+
+        <div className="extras-list" style={{ maxWidth: "600px", margin: "48px auto 0" }}>
+          <div className="extra-item reveal">
+            <span className="extra-name">Finais de semana e feriados</span>
+            <span className="extra-price">+R$60</span>
+          </div>
+          <div className="extra-item reveal">
+            <span className="extra-name">Foto extra</span>
+            <span className="extra-price">+R$20</span>
+          </div>
+          <div className="extra-item reveal">
+            <span className="extra-name">Cenário extra</span>
+            <span className="extra-price">+R$100</span>
+          </div>
+          <div className="extra-item reveal">
+            <span className="extra-name">Figurino extra</span>
+            <span className="extra-price">+R$100</span>
           </div>
         </div>
       </section>

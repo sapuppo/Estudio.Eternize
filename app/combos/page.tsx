@@ -20,6 +20,18 @@ export default function CombosPage() {
         <div className="hero-divider"></div>
       </div>
 
+      {/* GALERIA */}
+      <section className="gallery-section">
+        <div className="gallery-scroll">
+          <div className="gallery-item">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gestante%20M%C3%AAs%20das%20M%C3%A3es%20(1)-z3NKMEXPiDZlxwFW0sLjOVDnDQ7HrB.png" alt="Combo Gestante" />
+          </div>
+          <div className="gallery-item">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Newborn%20M%C3%AAs%20das%20M%C3%A3es-Z1sS0EHaCLm0dZnggDmYzgJU0RNW7g-cGPnDYYuYKhRPp9BwWiYiMKKKNJPnP.png" alt="Combo Newborn" />
+          </div>
+        </div>
+      </section>
+
       {/* COMBO SECTION */}
       <section className="combo-section">
         <div className="section-tag-row reveal">
@@ -113,6 +125,78 @@ export default function CombosPage() {
               >
                 Quero este combo
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ADICIONAIS */}
+      <section className="extras-section">
+        <div className="reveal">
+          <div className="section-label">Personalize</div>
+          <h2 className="section-title">Adicionais</h2>
+        </div>
+
+        <div className="extras-grid">
+          <div>
+            <div className="section-label reveal" style={{ marginTop: "48px", marginBottom: "0" }}>Adicionais disponíveis</div>
+            <div className="extras-list">
+              <div className="extra-item reveal">
+                <span className="extra-name">Finais de semana e feriados</span>
+                <span className="extra-price">+R$60</span>
+              </div>
+              <div className="extra-item reveal">
+                <span className="extra-name">Acompanhante extra</span>
+                <span className="extra-price">+R$50</span>
+              </div>
+              <div className="extra-item reveal">
+                <span className="extra-name">Pet pequeno porte (até 5kg)</span>
+                <span className="extra-price">+R$80</span>
+              </div>
+              <div className="extra-item reveal">
+                <span className="extra-name">Foto extra</span>
+                <span className="extra-price">+R$20</span>
+              </div>
+              <div className="extra-item reveal">
+                <span className="extra-name">Edição refinada em acompanhantes</span>
+                <span className="extra-price">+R$10/foto</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="products-col reveal">
+            <div className="section-label" style={{ marginTop: "48px", marginBottom: "0" }}>Produções exclusivas</div>
+            <div className="extras-list">
+              <div className="extra-item">
+                <span className="extra-name">Brilhos</span>
+                <span className="extra-price">Consultar</span>
+              </div>
+              <div className="extra-item">
+                <span className="extra-name">Pérolas</span>
+                <span className="extra-price">Consultar</span>
+              </div>
+              <div className="extra-item">
+                <span className="extra-name">Ensaio Molhado</span>
+                <span className="extra-price">Consultar</span>
+              </div>
+              <div className="extra-item">
+                <span className="extra-name">Cenário da Lua</span>
+                <span className="extra-price">Consultar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="extras-products reveal">
+          <div className="section-label" style={{ marginTop: "48px", marginBottom: "24px", textAlign: "center" }}>Produtos físicos</div>
+          <div className="products-grid">
+            <div className="product-item">
+              <div className="product-name">Álbum Luxo Personalizado<br /><small>20×60 aberto · 20 páginas</small></div>
+              <div className="product-price">R$1.190</div>
+            </div>
+            <div className="product-item">
+              <div className="product-name">Fotos Reveladas<br /><small>Tamanho 15×21 · 10 fotos</small></div>
+              <div className="product-price">R$80</div>
             </div>
           </div>
         </div>

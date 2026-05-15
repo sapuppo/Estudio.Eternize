@@ -16,6 +16,15 @@ export default function AniversarioPage() {
         <div className="hero-divider"></div>
       </div>
 
+      {/* GALERIA */}
+      <section className="gallery-section">
+        <div className="gallery-scroll">
+          <div className="gallery-item">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Proposta%20-%202026-JBrlKM8yv6CKFxqyPqRVIwnWmvU7h2-QXmyZZMBQJXKSKNfcjGbsLF3yEBLQb.png" alt="Ensaio Aniversário" />
+          </div>
+        </div>
+      </section>
+
       {/* ANIVERSARIO PACKAGES */}
       <section className="packages-section">
         <div className="packages-header reveal">
@@ -23,7 +32,7 @@ export default function AniversarioPage() {
             <div className="section-label">Pacotes de Ensaio</div>
             <h2 className="section-title">Aniversário</h2>
           </div>
-          <p style={{ maxWidth: "360px", fontSize: "13px", color: "var(--muted)", lineHeight: "1.8" }}>
+          <p className="packages-desc">
             Eternize a chegada de mais um ano com muita elegância, balões e vela faísca.
           </p>
         </div>
@@ -125,6 +134,10 @@ export default function AniversarioPage() {
           <div className="extra-item reveal">
             <span className="extra-name">Foto extra</span>
             <span className="extra-price">+R$20</span>
+          </div>
+          <div className="extra-item reveal">
+            <span className="extra-name">Acompanhante extra</span>
+            <span className="extra-price">+R$50</span>
           </div>
         </div>
       </section>

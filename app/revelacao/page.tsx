@@ -16,6 +16,15 @@ export default function RevelacaoPage() {
         <div className="hero-divider"></div>
       </div>
 
+      {/* GALERIA */}
+      <section className="gallery-section">
+        <div className="gallery-scroll">
+          <div className="gallery-item">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Revelac%CC%A7a%CC%83o%20-Zi2mAHll05HTv1wCTD2oVAJKc8Etok.png" alt="Ensaio Revelação" />
+          </div>
+        </div>
+      </section>
+
       {/* REVELACAO PACKAGES */}
       <section className="packages-section">
         <div className="packages-header reveal">
@@ -23,7 +32,7 @@ export default function RevelacaoPage() {
             <div className="section-label">Pacotes de Ensaio</div>
             <h2 className="section-title">Revelação</h2>
           </div>
-          <p style={{ maxWidth: "360px", fontSize: "13px", color: "var(--muted)", lineHeight: "1.8" }}>
+          <p className="packages-desc">
             Eternize o momento mágico da descoberta do sexo do seu bebê com fotos profissionais.
           </p>
         </div>
@@ -77,12 +86,32 @@ export default function RevelacaoPage() {
             </a>
           </div>
         </div>
+      </section>
 
-        {/* ADICIONAL INFO */}
-        <div className="reveal" style={{ textAlign: "center", marginTop: "48px" }}>
-          <p style={{ fontSize: "13px", color: "var(--muted)", padding: "16px 24px", border: "1px solid var(--border)", display: "inline-block" }}>
-            Make profissional pode ser contratada à parte · <span style={{ color: "var(--gold)" }}>R$150</span>
-          </p>
+      {/* ADICIONAIS */}
+      <section className="extras-section">
+        <div className="reveal">
+          <div className="section-label">Personalize</div>
+          <h2 className="section-title">Adicionais</h2>
+        </div>
+
+        <div className="extras-list" style={{ maxWidth: "600px", margin: "48px auto 0" }}>
+          <div className="extra-item reveal">
+            <span className="extra-name">Finais de semana e feriados</span>
+            <span className="extra-price">+R$60</span>
+          </div>
+          <div className="extra-item reveal">
+            <span className="extra-name">Acompanhante extra</span>
+            <span className="extra-price">+R$50</span>
+          </div>
+          <div className="extra-item reveal">
+            <span className="extra-name">Foto extra</span>
+            <span className="extra-price">+R$20</span>
+          </div>
+          <div className="extra-item reveal">
+            <span className="extra-name">Make profissional</span>
+            <span className="extra-price">+R$150</span>
+          </div>
         </div>
       </section>
 

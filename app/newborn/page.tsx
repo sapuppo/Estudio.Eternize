@@ -20,6 +20,15 @@ export default function NewbornPage() {
         <div className="hero-divider"></div>
       </div>
 
+      {/* GALERIA */}
+      <section className="gallery-section">
+        <div className="gallery-scroll">
+          <div className="gallery-item">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Newborn%20M%C3%AAs%20das%20M%C3%A3es-Z1sS0EHaCLm0dZnggDmYzgJU0RNW7g-cGPnDYYuYKhRPp9BwWiYiMKKKNJPnP.png" alt="Ensaio Newborn" />
+          </div>
+        </div>
+      </section>
+
       {/* NEWBORN PACKAGES */}
       <section className="packages-section">
         <div className="packages-header reveal">
@@ -27,7 +36,7 @@ export default function NewbornPage() {
             <div className="section-label">Pacotes de Ensaio</div>
             <h2 className="section-title">Newborn</h2>
           </div>
-          <p style={{ maxWidth: "360px", fontSize: "13px", color: "var(--muted)", lineHeight: "1.8" }}>
+          <p className="packages-desc">
             Edição refinada no bebê incluindo remoção de bolinhas, descamação e vermelhidão. Participação dos pais e irmãos inclusa.
           </p>
         </div>
@@ -110,6 +119,52 @@ export default function NewbornPage() {
             >
               Quero este pacote
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ADICIONAIS */}
+      <section className="extras-section">
+        <div className="reveal">
+          <div className="section-label">Personalize</div>
+          <h2 className="section-title">Adicionais</h2>
+        </div>
+
+        <div className="extras-grid">
+          <div>
+            <div className="section-label reveal" style={{ marginTop: "48px", marginBottom: "0" }}>Adicionais disponíveis</div>
+            <div className="extras-list">
+              <div className="extra-item reveal">
+                <span className="extra-name">Finais de semana e feriados</span>
+                <span className="extra-price">+R$60</span>
+              </div>
+              <div className="extra-item reveal">
+                <span className="extra-name">Pet pequeno porte (até 5kg)</span>
+                <span className="extra-price">+R$80</span>
+              </div>
+              <div className="extra-item reveal">
+                <span className="extra-name">Foto extra</span>
+                <span className="extra-price">+R$20</span>
+              </div>
+              <div className="extra-item reveal">
+                <span className="extra-name">Edição refinada em acompanhantes</span>
+                <span className="extra-price">+R$10/foto</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="products-col reveal">
+            <div className="section-label" style={{ marginTop: "48px", marginBottom: "0" }}>Produtos físicos</div>
+            <div className="extras-list">
+              <div className="product-item">
+                <div className="product-name">Álbum Luxo Personalizado<br /><small style={{ fontWeight: 300, color: "var(--muted)" }}>20×60 aberto · 20 páginas</small></div>
+                <div className="product-price">R$1.190</div>
+              </div>
+              <div className="product-item">
+                <div className="product-name">Fotos Reveladas<br /><small style={{ fontWeight: 300, color: "var(--muted)" }}>Tamanho 15×21 · 10 fotos</small></div>
+                <div className="product-price">R$80</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

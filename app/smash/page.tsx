@@ -16,6 +16,15 @@ export default function SmashPage() {
         <div className="hero-divider"></div>
       </div>
 
+      {/* GALERIA */}
+      <section className="gallery-section">
+        <div className="gallery-scroll">
+          <div className="gallery-item">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20Proposta%202026-pnZby029Con42PmMRwtr4lMHpPERWp-zHRnqmLXS1xkixEREJlQhGZTKJKlPl.png" alt="Smash the Cake" />
+          </div>
+        </div>
+      </section>
+
       {/* SMASH PACKAGES */}
       <section className="packages-section">
         <div className="packages-header reveal">
@@ -23,7 +32,7 @@ export default function SmashPage() {
             <div className="section-label">Pacotes de Ensaio</div>
             <h2 className="section-title">Smash the Cake</h2>
           </div>
-          <p style={{ maxWidth: "360px", fontSize: "13px", color: "var(--muted)", lineHeight: "1.8" }}>
+          <p className="packages-desc">
             Celebre o primeiro aniversário do seu bebê com muita diversão, bolo e um banho quentinho no final!
           </p>
         </div>
@@ -81,6 +90,37 @@ export default function SmashPage() {
         </div>
       </section>
 
+      {/* ADICIONAIS */}
+      <section className="extras-section">
+        <div className="reveal">
+          <div className="section-label">Personalize</div>
+          <h2 className="section-title">Adicionais</h2>
+        </div>
+
+        <div className="extras-list" style={{ maxWidth: "600px", margin: "48px auto 0" }}>
+          <div className="extra-item reveal">
+            <span className="extra-name">Finais de semana e feriados</span>
+            <span className="extra-price">+R$60</span>
+          </div>
+          <div className="extra-item reveal">
+            <span className="extra-name">Acompanhante extra</span>
+            <span className="extra-price">+R$50</span>
+          </div>
+          <div className="extra-item reveal">
+            <span className="extra-name">Foto extra</span>
+            <span className="extra-price">+R$15</span>
+          </div>
+          <div className="extra-item reveal">
+            <span className="extra-name">Foto revelada</span>
+            <span className="extra-price">+R$10</span>
+          </div>
+          <div className="extra-item reveal">
+            <span className="extra-name">Álbum 20x60 (20 páginas)</span>
+            <span className="extra-price">R$750</span>
+          </div>
+        </div>
+      </section>
+
       {/* INFORMAÇÕES */}
       <section className="policies-section">
         <div className="reveal">
@@ -111,37 +151,6 @@ export default function SmashPage() {
             <div className="policy-icon">🎂</div>
             <div className="policy-title">Reação do Bebê</div>
             <p className="policy-text">Cada bebê reage de uma forma diante do bolo. O ensaio depende da reação natural deles.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* ADICIONAIS */}
-      <section className="extras-section">
-        <div className="reveal">
-          <div className="section-label">Personalize</div>
-          <h2 className="section-title">Adicionais</h2>
-        </div>
-
-        <div className="extras-list" style={{ maxWidth: "600px", margin: "48px auto 0" }}>
-          <div className="extra-item reveal">
-            <span className="extra-name">Finais de semana e feriados</span>
-            <span className="extra-price">+R$60</span>
-          </div>
-          <div className="extra-item reveal">
-            <span className="extra-name">Acompanhante extra</span>
-            <span className="extra-price">+R$50</span>
-          </div>
-          <div className="extra-item reveal">
-            <span className="extra-name">Foto extra</span>
-            <span className="extra-price">+R$15</span>
-          </div>
-          <div className="extra-item reveal">
-            <span className="extra-name">Foto revelada</span>
-            <span className="extra-price">+R$10</span>
-          </div>
-          <div className="extra-item reveal">
-            <span className="extra-name">Álbum 20x60 (20 páginas)</span>
-            <span className="extra-price">R$750</span>
           </div>
         </div>
       </section>

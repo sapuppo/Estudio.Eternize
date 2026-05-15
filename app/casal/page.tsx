@@ -16,6 +16,15 @@ export default function CasalPage() {
         <div className="hero-divider"></div>
       </div>
 
+      {/* GALERIA */}
+      <section className="gallery-section">
+        <div className="gallery-scroll">
+          <div className="gallery-item">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Ensaio%20Casal-ubNw9DM3P3PPykrdAl8Dujb8ADV0q5-cGPnDYYuYKhRPp9BwWiYiMKKKNJPnP.png" alt="Ensaio Casal" />
+          </div>
+        </div>
+      </section>
+
       {/* CASAL PACKAGES */}
       <section className="packages-section">
         <div className="packages-header reveal">
@@ -23,7 +32,7 @@ export default function CasalPage() {
             <div className="section-label">Pacotes de Ensaio</div>
             <h2 className="section-title">Casal</h2>
           </div>
-          <p style={{ maxWidth: "360px", fontSize: "13px", color: "var(--muted)", lineHeight: "1.8" }}>
+          <p className="packages-desc">
             Registre momentos únicos a dois com direcionamento de poses e edição refinada.
           </p>
         </div>
@@ -77,13 +86,6 @@ export default function CasalPage() {
               Quero este pacote
             </a>
           </div>
-        </div>
-
-        {/* ADICIONAL INFO */}
-        <div className="reveal" style={{ textAlign: "center", marginTop: "48px" }}>
-          <p style={{ fontSize: "13px", color: "var(--muted)", padding: "16px 24px", border: "1px solid var(--border)", display: "inline-block" }}>
-            Maquiagem e Babyliss podem ser contratados à parte · <span style={{ color: "var(--gold)" }}>R$150</span>
-          </p>
         </div>
       </section>
 
