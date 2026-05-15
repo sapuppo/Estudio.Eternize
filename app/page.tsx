@@ -4,7 +4,7 @@ import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import PageWrapper from "@/components/PageWrapper";
-import PortfolioCarousel from "@/components/PortfolioCarousel";
+import PortfolioCarousel, { homepageMixedImages } from "@/components/PortfolioCarousel";
 import ImageCompare from "@/components/ImageCompare";
 
 export default function Home() {
@@ -32,7 +32,7 @@ export default function Home() {
           <span>Promoção</span>
           <strong>Mês das Mães</strong>
         </div>
-        <h1 className="hero-title">Registre<br /><em>cada</em><br /><span style={{ lineHeight: "0.5", display: "inline-block" }}>momento</span></h1>
+        <h1 className="hero-title">Registre<br /><em>cada</em><br /><span style={{ lineHeight: "0.3", display: "inline-block", marginTop: "-0.1em" }}>momento</span></h1>
         <div className="hero-divider"></div>
         <div style={{ marginTop: "32px", animation: "fadeIn 1s ease 1.8s both" }}>
           <img src="/images/Eternize.svg" alt="Eternize" style={{ height: "256px", width: "auto" }} />
@@ -40,7 +40,10 @@ export default function Home() {
       </div>
 
       {/* PORTFOLIO CAROUSEL */}
-      <PortfolioCarousel />
+      <PortfolioCarousel 
+        title="Nosso trabalho" 
+        images={homepageMixedImages} 
+      />
 
       {/* ENSAIOS GRID */}
       <section className="packages-section">

@@ -67,13 +67,44 @@ const smashImages = [
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%2817%29-Ejv1hLBovAw9NBwvgVQVQgLC2vPrAk.jpg",
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%2818%29-OFJZEb2vOars08H8RkOMWL8gXQeCUR.jpg",
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%2819%29-bbQKfYlnAJhkbiRLrrU4Q1atObwIlC.jpg",
+  // New smash images
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%2821%29-tbtHpsT6N2UaClqINsBStBPgvW3htL.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%2822%29-vTTjisMa0ufBtyGYhKe1NcSWiwqz2u.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%2823%29-uuweuWGy8SUSkCDX9PMsIuKmTbB4xL.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%2824%29-4pujyfbOsN1QlvsL8oMXqJ2pwkwOIQ.jpg",
 ];
 
-export { newbornImages, defaultGestanteImages, smashImages };
+// Mixed images for homepage - alternating between gestante, newborn and smash
+const homepageMixedImages = [
+  // Gestante
+  "/images/portfolio/gestante-1.jpg",
+  "/images/portfolio/gestante-5.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/gestante%20%281%29-P0ExdbFYIUcaQ6SmdRrJPuYGsgnwUm.jpg",
+  // Newborn
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Newborn%20%288%29-8SzodbPEhUd8qYXK7mXNai4k3FxtaO.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Newborn%20%2811%29-n3gtjvRS9HbN4POz42WKcOeYW1vQef.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Newborn%20%285%29-MExk8BBEsRwdh2VeWhn8YlwaQaMeOa.jpg",
+  // Smash
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%281%29-3XZtoadxW2GM4xCIniSY0xkUjFISLg.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%285%29-vnER8mkwO9U1GikICKr2DeJvIsvq9F.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%2815%29-A91zqyhCwDPEELMezaSGcqHQjyPb03.jpg",
+  // More gestante
+  "/images/portfolio/gestante-9.jpg",
+  "/images/portfolio/gestante-12.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/gestante%20%283%29-5NpYYbH8iZgbsxbX5wqiOnCOXk37Wj.jpg",
+  // More newborn
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Newborn%20%2816%29-OAuk7KBZQVKf5UFo3PSAyRz81X0Q5j.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Newborn%20%2818%29-JPrcRWDMNANJVH5tffNzhCOkGfcG0M.jpg",
+  // More smash
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%2821%29-tbtHpsT6N2UaClqINsBStBPgvW3htL.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%2824%29-4pujyfbOsN1QlvsL8oMXqJ2pwkwOIQ.jpg",
+];
+
+export { newbornImages, defaultGestanteImages, smashImages, homepageMixedImages };
 
 export default function PortfolioCarousel({ 
-  title = "Portfólio Gestante", 
-  subtitle = "Nosso trabalho",
+  title = "Nosso trabalho", 
+  subtitle,
   images
 }: PortfolioCarouselProps) {
   const trackRef = useRef<HTMLDivElement>(null);
@@ -83,7 +114,8 @@ export default function PortfolioCarousel({
   const [dragStartScroll, setDragStartScroll] = useState(0);
   const [autoScrollPaused, setAutoScrollPaused] = useState(false);
   
-  const portfolioImages = images || defaultGestanteImages;
+  // Default to mixed images for homepage if no images provided
+  const portfolioImages = images || homepageMixedImages;
 
   // Get current scroll position from transform
   const getCurrentScroll = useCallback(() => {
@@ -188,19 +220,10 @@ export default function PortfolioCarousel({
     setTimeout(() => setAutoScrollPaused(false), 3000);
   };
 
-  // Determine alt text based on title
-  const getAltText = () => {
-    if (title.toLowerCase().includes("newborn")) return "Ensaio Newborn";
-    if (title.toLowerCase().includes("smash")) return "Ensaio Smash the Cake";
-    return "Ensaio Gestante";
-  };
-
-  const altText = getAltText();
-
   return (
     <section className="portfolio-section">
       <div className="portfolio-header reveal">
-        <div className="section-label" style={{ color: "var(--gold)" }}>{subtitle}</div>
+        {subtitle && <div className="section-label" style={{ color: "var(--gold)" }}>{subtitle}</div>}
         <h2 className="section-title" style={{ color: "var(--warm-white)" }}>{title}</h2>
       </div>
       
@@ -222,13 +245,13 @@ export default function PortfolioCarousel({
         >
           {portfolioImages.map((img, index) => (
             <div key={index} className="portfolio-item">
-              <img src={img} alt={`${altText} ${index + 1}`} draggable={false} />
+              <img src={img} alt={`Ensaio fotográfico ${index + 1}`} draggable={false} />
             </div>
           ))}
           {/* Duplicate for infinite scroll effect */}
           {portfolioImages.map((img, index) => (
             <div key={`dup-${index}`} className="portfolio-item">
-              <img src={img} alt={`${altText} ${index + 1}`} draggable={false} />
+              <img src={img} alt={`Ensaio fotográfico ${index + 1}`} draggable={false} />
             </div>
           ))}
         </div>
