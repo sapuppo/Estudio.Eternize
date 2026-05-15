@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useCallback } from "react";
 
 interface PortfolioCarouselProps {
   title?: string;
@@ -47,7 +47,29 @@ const newbornImages = [
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Newborn%20%2817%29-8sCkEIlZdJfQlfXvSBquD8bwELfx1T.jpg",
 ];
 
-export { newbornImages, defaultGestanteImages };
+const smashImages = [
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%281%29-3XZtoadxW2GM4xCIniSY0xkUjFISLg.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%282%29-VQFR58z8YUe70QThYu0yIVb8H1qDaO.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%283%29-t6xsWR1eSAdwujKlbQRMgJIuyi9Zgc.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%284%29-bJejr4gV8Y3MpoQ2dSu3Y0CW31WLvN.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%285%29-vnER8mkwO9U1GikICKr2DeJvIsvq9F.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%286%29-0sq8mNQo6kazEASBQMYT5EARzpi3mm.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%287%29-kgTpw7c76Towu16J0pUYXveCcjy7CA.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%288%29-sWvbshTimKxNF17cGSaPMyjprXreGF.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%289%29-Buxu3FCSs1KDKuAPmgVorCYJsDWN95.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%2810%29-JJZoj7SoP7xUgwf9PWnge4mHupxcgt.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%2811%29-Kd2x2oOyca6FfgINapdBLydVHTDsVH.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%2812%29-F5BLTmIxEtUyxWZ0a7pWThjriBi7Ga.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%2813%29-xVc9Yjprp721ZBCFRx3yvYvsw7PD3S.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%2814%29-p9DVthvakhnQJamn2zjrVAJceMagKl.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%2815%29-A91zqyhCwDPEELMezaSGcqHQjyPb03.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%2816%29-Kp4lqfl2n1hm0f2rIx9gMRhAbPjaU3.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%2817%29-Ejv1hLBovAw9NBwvgVQVQgLC2vPrAk.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%2818%29-OFJZEb2vOars08H8RkOMWL8gXQeCUR.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%2819%29-bbQKfYlnAJhkbiRLrrU4Q1atObwIlC.jpg",
+];
+
+export { newbornImages, defaultGestanteImages, smashImages };
 
 export default function PortfolioCarousel({ 
   title = "Portfólio Gestante", 
@@ -55,31 +77,39 @@ export default function PortfolioCarousel({
   images
 }: PortfolioCarouselProps) {
   const trackRef = useRef<HTMLDivElement>(null);
+  const scrollPositionRef = useRef(0);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
+  const [dragStartScroll, setDragStartScroll] = useState(0);
   const [autoScrollPaused, setAutoScrollPaused] = useState(false);
   
   const portfolioImages = images || defaultGestanteImages;
+
+  // Get current scroll position from transform
+  const getCurrentScroll = useCallback(() => {
+    if (!trackRef.current) return 0;
+    const transform = trackRef.current.style.transform;
+    const match = transform.match(/translateX\(-?(\d+\.?\d*)px\)/);
+    return match ? parseFloat(match[1]) : scrollPositionRef.current;
+  }, []);
 
   // Auto scroll animation
   useEffect(() => {
     if (autoScrollPaused || !trackRef.current) return;
     
     let animationId: number;
-    let scrollPosition = 0;
     const speed = 0.5;
     
     const animate = () => {
       if (trackRef.current && !autoScrollPaused) {
-        scrollPosition += speed;
+        scrollPositionRef.current += speed;
         const maxScroll = trackRef.current.scrollWidth / 2;
         
-        if (scrollPosition >= maxScroll) {
-          scrollPosition = 0;
+        if (scrollPositionRef.current >= maxScroll) {
+          scrollPositionRef.current = 0;
         }
         
-        trackRef.current.style.transform = `translateX(-${scrollPosition}px)`;
+        trackRef.current.style.transform = `translateX(-${scrollPositionRef.current}px)`;
       }
       animationId = requestAnimationFrame(animate);
     };
@@ -94,11 +124,9 @@ export default function PortfolioCarousel({
     setIsDragging(true);
     setAutoScrollPaused(true);
     setStartX(e.pageX);
-    if (trackRef.current) {
-      const transform = trackRef.current.style.transform;
-      const match = transform.match(/translateX\(-?(\d+\.?\d*)px\)/);
-      setScrollLeft(match ? parseFloat(match[1]) : 0);
-    }
+    const currentScroll = getCurrentScroll();
+    setDragStartScroll(currentScroll);
+    scrollPositionRef.current = currentScroll;
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {
@@ -106,18 +134,20 @@ export default function PortfolioCarousel({
     e.preventDefault();
     const x = e.pageX;
     const walk = (startX - x) * 1.5;
-    let newScroll = scrollLeft + walk;
+    let newScroll = dragStartScroll + walk;
     
     const maxScroll = trackRef.current.scrollWidth / 2;
-    if (newScroll < 0) newScroll = maxScroll + newScroll;
-    if (newScroll > maxScroll) newScroll = newScroll - maxScroll;
+    // Wrap around smoothly
+    while (newScroll < 0) newScroll += maxScroll;
+    while (newScroll >= maxScroll) newScroll -= maxScroll;
     
+    scrollPositionRef.current = newScroll;
     trackRef.current.style.transform = `translateX(-${newScroll}px)`;
   };
 
   const handleMouseUp = () => {
     setIsDragging(false);
-    // Resume auto scroll after a delay
+    // Resume auto scroll after a delay, continuing from current position
     setTimeout(() => setAutoScrollPaused(false), 3000);
   };
 
@@ -133,23 +163,23 @@ export default function PortfolioCarousel({
     setIsDragging(true);
     setAutoScrollPaused(true);
     setStartX(e.touches[0].pageX);
-    if (trackRef.current) {
-      const transform = trackRef.current.style.transform;
-      const match = transform.match(/translateX\(-?(\d+\.?\d*)px\)/);
-      setScrollLeft(match ? parseFloat(match[1]) : 0);
-    }
+    const currentScroll = getCurrentScroll();
+    setDragStartScroll(currentScroll);
+    scrollPositionRef.current = currentScroll;
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
     if (!isDragging || !trackRef.current) return;
     const x = e.touches[0].pageX;
     const walk = (startX - x) * 1.5;
-    let newScroll = scrollLeft + walk;
+    let newScroll = dragStartScroll + walk;
     
     const maxScroll = trackRef.current.scrollWidth / 2;
-    if (newScroll < 0) newScroll = maxScroll + newScroll;
-    if (newScroll > maxScroll) newScroll = newScroll - maxScroll;
+    // Wrap around smoothly
+    while (newScroll < 0) newScroll += maxScroll;
+    while (newScroll >= maxScroll) newScroll -= maxScroll;
     
+    scrollPositionRef.current = newScroll;
     trackRef.current.style.transform = `translateX(-${newScroll}px)`;
   };
 
@@ -158,7 +188,14 @@ export default function PortfolioCarousel({
     setTimeout(() => setAutoScrollPaused(false), 3000);
   };
 
-  const altText = title.includes("Newborn") ? "Ensaio Newborn" : "Ensaio Gestante";
+  // Determine alt text based on title
+  const getAltText = () => {
+    if (title.toLowerCase().includes("newborn")) return "Ensaio Newborn";
+    if (title.toLowerCase().includes("smash")) return "Ensaio Smash the Cake";
+    return "Ensaio Gestante";
+  };
+
+  const altText = getAltText();
 
   return (
     <section className="portfolio-section">
