@@ -1,60 +1,29 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import "./globals.css";
+import Link from "next/link";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
+import PageWrapper from "@/components/PageWrapper";
+import PortfolioCarousel from "@/components/PortfolioCarousel";
 
 export default function Home() {
-  const [scrolled, setScrolled] = useState(false);
+  const ensaios = [
+    { name: "Gestante", href: "/gestante", desc: "Eternize cada momento da sua gestação" },
+    { name: "Newborn", href: "/newborn", desc: "Os primeiros dias de vida eternizados" },
+    { name: "Combos", href: "/combos", desc: "Gestante + Newborn — A experiência completa" },
+    { name: "Smash the Cake", href: "/smash", desc: "O primeiro aniversário cheio de doçura" },
+    { name: "Revelação", href: "/revelacao", desc: "Descubra o sexo do bebê" },
+    { name: "Aniversário", href: "/aniversario", desc: "Celebre sua data especial" },
+    { name: "Casal", href: "/casal", desc: "Eternize o amor de vocês" },
+    { name: "Família", href: "/familia", desc: "Momentos em família eternizados" },
+    { name: "Profissional", href: "/profissional", desc: "Posicionamento de imagem" },
+  ];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 60);
-    };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => {
-            entry.target.classList.add("visible");
-          }, 80);
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
-
-    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
-
-    document.querySelectorAll(".packages-grid .package-card, .policies-grid .policy-card").forEach((el, i) => {
-      (el as HTMLElement).style.transitionDelay = `${i * 80}ms`;
-    });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      observer.disconnect();
-    };
-  }, []);
 
   return (
-    <>
-      <nav className={scrolled ? "nav-scrolled" : ""}>
-        <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
-          <img
-            src="/images/Eternize.svg"
-            alt="Eternize"
-            className="nav-logo-img"
-            style={{ height: scrolled ? "36px" : "56px", cursor: "pointer" }}
-          />
-        </a>
-        <div className="nav-links">
-          <a href="#gestante">Gestante</a>
-          <a href="#combos">Combos</a>
-          <a href="#adicionais">Adicionais</a>
-          <a href="#politicas">Políticas</a>
-        </div>
-      </nav>
+    <PageWrapper>
+      <Nav />
 
       {/* HERO */}
       <div className="hero">
@@ -63,264 +32,40 @@ export default function Home() {
           <strong>Mês das Mães</strong>
         </div>
         <h1 className="hero-title">Registre<br /><em>cada</em><br />momento</h1>
-        <p className="hero-subtitle">Gestante &amp; Newborn — 2026</p>
+        <p className="hero-subtitle">Estúdio Fotográfico — 2026</p>
         <div className="hero-divider"></div>
         <div style={{ marginTop: "32px", animation: "fadeIn 1s ease 1.8s both" }}>
           <img src="/images/Eternize.svg" alt="Eternize" style={{ height: "256px", width: "auto" }} />
         </div>
       </div>
 
-      {/* GESTANTE PACKAGES */}
-      <section className="packages-section" id="gestante">
+      {/* PORTFOLIO CAROUSEL */}
+      <PortfolioCarousel />
+
+      {/* ENSAIOS GRID */}
+      <section className="packages-section">
         <div className="packages-header reveal">
           <div>
-            <div className="section-label">Pacotes de Ensaio</div>
-            <h2 className="section-title">Gestante</h2>
+            <div className="section-label">Nossos Serviços</div>
+            <h2 className="section-title">Ensaios</h2>
           </div>
           <p style={{ maxWidth: "360px", fontSize: "13px", color: "var(--muted)", lineHeight: "1.8" }}>
-            Cada ensaio inclui maquiagem profissional, modelagem de cabelo, direcionamento de poses e edição refinada.
+            Cada momento merece ser eternizado. Escolha o ensaio ideal para você e sua família.
           </p>
         </div>
 
-        <div className="packages-grid">
-          {/* CLÁSSICO */}
-          <div className="package-card reveal">
-            <div className="pkg-tag">Pacote 01</div>
-            <div className="pkg-name">Clássico</div>
-            <div className="pkg-line"></div>
-            <ul className="pkg-features">
-              <li className="pkg-feature">10 Fotos digitais editadas</li>
-              <li className="pkg-feature">1 Cenário + 1 Figurino</li>
-              <li className="pkg-feature">1 Acompanhante</li>
-              <li className="pkg-feature">Maquiagem profissional</li>
-              <li className="pkg-feature">Modelagem de cabelo</li>
-              <li className="pkg-feature">Edição refinada completa</li>
-            </ul>
-            <span className="pkg-price-old">R$590</span>
-            <div className="pkg-price-main">R$530</div>
-            <div className="pkg-installment">em até 12× sem juros</div>
-            <div className="pkg-signal">R$100 de sinal para reservar</div>
-            <a 
-              href="https://api.whatsapp.com/send?phone=5511986991295&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20o%20pacote%20Cl%C3%A1ssico%20Gestante." 
-              target="_blank" 
-              className="pkg-cta-btn"
-            >
-              Quero este pacote
-            </a>
-          </div>
-
-          {/* DELUXE */}
-          <div className="package-card reveal">
-            <div className="pkg-tag">Pacote 02</div>
-            <div className="pkg-name">Deluxe</div>
-            <div className="pkg-line"></div>
-            <ul className="pkg-features">
-              <li className="pkg-feature">15 Fotos digitais editadas</li>
-              <li className="pkg-feature">2 Cenários + 2 Figurinos</li>
-              <li className="pkg-feature">2 Acompanhantes</li>
-              <li className="pkg-feature">Maquiagem profissional</li>
-              <li className="pkg-feature">Modelagem de cabelo</li>
-              <li className="pkg-feature">Edição refinada completa</li>
-            </ul>
-            <span className="pkg-price-old">R$690</span>
-            <div className="pkg-price-main">R$620</div>
-            <div className="pkg-installment">em até 12× sem juros</div>
-            <div className="pkg-signal">R$100 de sinal para reservar</div>
-            <a 
-              href="https://api.whatsapp.com/send?phone=5511986991295&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20o%20pacote%20Deluxe%20Gestante." 
-              target="_blank" 
-              className="pkg-cta-btn"
-            >
-              Quero este pacote
-            </a>
-          </div>
-
-          {/* PREMIUM */}
-          <div className="package-card reveal">
-            <div className="pkg-highlight">Mais escolhido</div>
-            <div className="pkg-tag">Pacote 03</div>
-            <div className="pkg-name">Premium</div>
-            <div className="pkg-line"></div>
-            <ul className="pkg-features">
-              <li className="pkg-feature">20 Fotos digitais editadas</li>
-              <li className="pkg-feature">3 Cenários + 3 Figurinos</li>
-              <li className="pkg-feature">Produção exclusiva inclusa</li>
-              <li className="pkg-feature">2 Acompanhantes</li>
-              <li className="pkg-feature">Maquiagem + cabelo profissional</li>
-              <li className="pkg-feature">Edição refinada completa</li>
-            </ul>
-            <span className="pkg-price-old">R$990</span>
-            <div className="pkg-price-main">R$890</div>
-            <div className="pkg-installment">em até 12× sem juros</div>
-            <div className="pkg-signal">R$100 de sinal para reservar</div>
-            <a 
-              href="https://api.whatsapp.com/send?phone=5511986991295&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20o%20pacote%20Premium%20Gestante." 
-              target="_blank" 
-              className="pkg-cta-btn"
-            >
-              Quero este pacote
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* COMBO SECTION */}
-      <section className="combo-section" id="combos">
-        <div className="section-tag-row reveal">
-          <div className="tag">Gestante + Newborn</div>
-          <div className="line"></div>
-        </div>
-
-        <div className="reveal" style={{ marginBottom: "12px" }}>
-          <div className="section-label" style={{ color: "var(--gold)" }}>A experiência completa</div>
-        </div>
-        <h2 className="section-title reveal" style={{ color: "var(--warm-white)" }}>Combos<br /><em style={{ fontStyle: "italic", color: "var(--gold)" }}>especiais</em></h2>
-
-        <div className="combo-grid">
-          {/* COMBO ETERNIZE */}
-          <div className="combo-card reveal">
-            <div className="combo-name">Eternize</div>
-            <div className="combo-sub">Combo completo</div>
-
-            <div className="combo-cols">
-              <div>
-                <div className="combo-col-title">Gestante</div>
-                <div className="combo-feat">25 fotos editadas</div>
-                <div className="combo-feat">3 cenários e figurinos</div>
-                <div className="combo-feat">2 acompanhantes</div>
-                <div className="combo-feat">Maquiagem e cabelo</div>
-                <div className="combo-feat">Poses direcionadas</div>
-                <div className="combo-feat">Edição refinada</div>
+        <div className="ensaios-grid">
+          {ensaios.map((ensaio) => (
+            <Link key={ensaio.href} href={ensaio.href} className="ensaio-card reveal">
+              <div className="ensaio-name">{ensaio.name}</div>
+              <div className="ensaio-desc">{ensaio.desc}</div>
+              <div className="ensaio-arrow">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
               </div>
-              <div>
-                <div className="combo-col-title">Newborn</div>
-                <div className="combo-feat">15 fotos editadas</div>
-                <div className="combo-feat">2 cenários bebê</div>
-                <div className="combo-feat">2 figurinos bebê</div>
-                <div className="combo-feat">1 cenário com pais</div>
-                <div className="combo-feat">Pais e irmãos inclusos</div>
-                <div className="combo-feat">Edição refinada</div>
-              </div>
-            </div>
-
-            <div className="combo-price-wrap">
-              <div className="combo-price-old">R$1.440</div>
-              <div className="combo-price">R$1.290</div>
-              <div className="combo-installment">em até 12× sem juros</div>
-              <div className="combo-signal">R$100 de sinal para reservar</div>
-              <a 
-                href="https://api.whatsapp.com/send?phone=5511986991295&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20o%20Combo%20Eternize%20(Gestante%20%2B%20Newborn)." 
-                target="_blank" 
-                className="combo-cta-btn"
-              >
-                Quero este combo
-              </a>
-            </div>
-          </div>
-
-          {/* COMBO LUXO */}
-          <div className="combo-card featured reveal">
-            <div className="combo-badge">Luxo</div>
-            <div className="combo-name">Eternize Luxo</div>
-            <div className="combo-sub">Experiência premium</div>
-
-            <div className="combo-cols">
-              <div>
-                <div className="combo-col-title">Gestante</div>
-                <div className="combo-feat">30 fotos editadas</div>
-                <div className="combo-feat">+Todos os clicks sem edição</div>
-                <div className="combo-feat">3 cenários e figurinos</div>
-                <div className="combo-feat">Produção exclusiva inclusa</div>
-                <div className="combo-feat">Maquiagem e cabelo</div>
-                <div className="combo-feat">Edição refinada</div>
-              </div>
-              <div>
-                <div className="combo-col-title">Newborn</div>
-                <div className="combo-feat">20 fotos editadas</div>
-                <div className="combo-feat">+Todos os clicks sem edição</div>
-                <div className="combo-feat">2 cenários bebê</div>
-                <div className="combo-feat">Maquiagem e cabelo</div>
-                <div className="combo-feat">Pais e irmãos inclusos</div>
-                <div className="combo-feat">Álbum luxo personalizado</div>
-              </div>
-            </div>
-
-            <div className="combo-price-wrap">
-              <div className="combo-price-old">R$2.690</div>
-              <div className="combo-price">R$2.280</div>
-              <div className="combo-installment">em até 12× sem juros</div>
-              <div className="combo-signal">R$100 de sinal para reservar</div>
-              <a 
-                href="https://api.whatsapp.com/send?phone=5511986991295&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20o%20Combo%20Eternize%20Luxo%20(Gestante%20%2B%20Newborn)." 
-                target="_blank" 
-                className="combo-cta-btn"
-              >
-                Quero este combo
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ADICIONAIS */}
-      <section className="extras-section" id="adicionais">
-        <div className="reveal">
-          <div className="section-label">Personalize</div>
-          <h2 className="section-title">Adicionais<br />&amp; Produtos</h2>
-        </div>
-
-        <div className="extras-grid">
-          <div>
-            <div className="section-label reveal" style={{ marginTop: "48px", marginBottom: "0" }}>Adicionais disponíveis</div>
-            <div className="extras-list">
-              <div className="extra-item reveal">
-                <span className="extra-name">Finais de semana e feriados</span>
-                <span className="extra-price">+R$60</span>
-              </div>
-              <div className="extra-item reveal">
-                <span className="extra-name">Acompanhante extra</span>
-                <span className="extra-price">+R$50</span>
-              </div>
-              <div className="extra-item reveal">
-                <span className="extra-name">Pet pequeno porte (até 5kg)</span>
-                <span className="extra-price">+R$80</span>
-              </div>
-              <div className="extra-item reveal">
-                <span className="extra-name">Foto extra — Gestante</span>
-                <span className="extra-price">+R$20</span>
-              </div>
-              <div className="extra-item reveal">
-                <span className="extra-name">Foto extra — Newborn</span>
-                <span className="extra-price">+R$25</span>
-              </div>
-              <div className="extra-item reveal">
-                <span className="extra-name">Newborn de gêmeos</span>
-                <span className="extra-price">+R$250</span>
-              </div>
-              <div className="extra-item reveal">
-                <span className="extra-name">Edição refinada em acompanhantes</span>
-                <span className="extra-price">+R$10/foto</span>
-              </div>
-              <div className="extra-item reveal">
-                <span className="extra-name">Produções exclusivas (Brilhos, Pérolas, Ensaio Molhado, Cenário da Lua)</span>
-                <span className="extra-price">Consultar</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="products-col reveal">
-            <div className="section-label" style={{ marginTop: "48px", marginBottom: "0" }}>Produtos físicos</div>
-            <div className="extras-list">
-              <div className="product-item">
-                <div className="product-name">Álbum Luxo Personalizado<br /><small style={{ fontWeight: 300, color: "var(--muted)" }}>20×60 aberto · 20 páginas</small></div>
-                <div className="product-price">R$1.190</div>
-              </div>
-              <div className="product-item">
-                <div className="product-name">Fotos Reveladas<br /><small style={{ fontWeight: 300, color: "var(--muted)" }}>Tamanho 15×21 · 10 fotos</small></div>
-                <div className="product-price">R$80</div>
-              </div>
-            </div>
-          </div>
+            </Link>
+          ))}
         </div>
       </section>
 
@@ -408,46 +153,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOOTER CTA */}
-      <section className="footer-cta">
-        <h2 className="cta-title reveal">Venha viver<br />essa experiência</h2>
-        <p className="cta-sub reveal">Agende seu ensaio · Mês das Mães 2026</p>
-        <a href="https://api.whatsapp.com/send?phone=5511986991295" target="_blank" className="cta-btn reveal">Reservar minha data</a>
-        <p className="cta-signal reveal">R$100 de sinal · Restante no dia do ensaio · 12× sem juros</p>
-        <div className="reveal" style={{ marginTop: "40px" }}>
-          <img src="/images/Eternize.svg" alt="Eternize" style={{ height: "192px", width: "auto" }} />
-        </div>
-        <div className="footer-logo reveal" style={{ marginTop: "16px" }}>Eternize · Estúdio Fotográfico</div>
-        
-        <div className="footer-info reveal" style={{ marginTop: "32px", display: "flex", flexDirection: "column", alignItems: "center", gap: "16px" }}>
-          <a 
-            href="https://instagram.com.br/estudio.eternize" 
-            target="_blank" 
-            className="footer-link"
-            style={{ display: "flex", alignItems: "center", gap: "8px", color: "var(--muted)", textDecoration: "none", transition: "color 0.3s" }}
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-            </svg>
-            <span style={{ fontSize: "12px", letterSpacing: "0.05em" }}>@estudio.eternize</span>
-          </a>
-          
-          <a 
-            href="https://maps.google.com/?q=Estudio+Eternize+São+Bernardo+do+Campo" 
-            target="_blank" 
-            className="footer-link"
-            style={{ display: "flex", alignItems: "center", gap: "8px", color: "var(--muted)", textDecoration: "none", transition: "color 0.3s", textAlign: "center" }}
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-              <circle cx="12" cy="10" r="3"></circle>
-            </svg>
-            <span style={{ fontSize: "12px", letterSpacing: "0.05em" }}>Estudio Eternize</span>
-          </a>
-        </div>
-      </section>
-    </>
+      <Footer />
+    </PageWrapper>
   );
 }
