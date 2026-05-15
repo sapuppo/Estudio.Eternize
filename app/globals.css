@@ -145,6 +145,126 @@ body {
   margin-top: 4px;
 }
 
+/* PAGE HERO (internal pages) */
+.page-hero {
+  min-height: 60vh;
+  background: var(--dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 120px 40px 80px;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 40%, rgba(201,169,110,0.08) 0%, transparent 60%),
+              radial-gradient(ellipse at 20% 80%, rgba(200,132,122,0.06) 0%, transparent 50%);
+}
+
+.page-hero .hero-badge {
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+.page-hero .hero-title {
+  font-size: clamp(48px, 10vw, 100px);
+}
+
+.page-hero .hero-subtitle {
+  margin-top: 24px;
+}
+
+.page-hero .hero-divider {
+  height: 60px;
+  margin-top: 32px;
+}
+
+/* ENSAIOS GRID */
+.ensaios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ensaio-card {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.ensaio-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(201,169,110,0.03) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.ensaio-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+}
+
+.ensaio-card:hover::before {
+  opacity: 1;
+}
+
+.ensaio-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--dark);
+  margin-bottom: 8px;
+  transition: color 0.3s;
+}
+
+.ensaio-card:hover .ensaio-name {
+  color: var(--gold);
+}
+
+.ensaio-desc {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.ensaio-arrow {
+  margin-top: 24px;
+  color: var(--muted);
+  transition: color 0.3s, transform 0.3s;
+}
+
+.ensaio-card:hover .ensaio-arrow {
+  color: var(--gold);
+  transform: translateX(4px);
+}
+
+@media (max-width: 900px) {
+  .ensaios-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .ensaios-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* SECTIONS */
 section {
   padding: 120px 60px;
@@ -911,6 +1031,65 @@ nav.nav-scrolled {
 }
 
 .nav-links a:hover { color: var(--gold); }
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-btn {
+  background: none;
+  border: none;
+  font-family: 'Jost', sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+.nav-dropdown-btn:hover {
+  color: var(--gold);
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 16px;
+  background: rgba(26,22,18,0.98);
+  border: 1px solid var(--border);
+  padding: 12px 0;
+  min-width: 180px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 200;
+}
+
+.nav-dropdown-menu.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-dropdown-menu a {
+  display: block;
+  padding: 10px 24px;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.3s, background 0.3s;
+}
+
+.nav-dropdown-menu a:hover {
+  color: var(--gold);
+  background: rgba(201,169,110,0.08);
+}
 
 @media (max-width: 768px) {
   nav { padding: 20px 24px; }
