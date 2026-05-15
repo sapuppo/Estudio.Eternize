@@ -243,6 +243,7 @@ body {
   color: var(--muted);
   text-transform: uppercase;
   margin-top: 36px;
+  text-align: center;
   animation: fadeIn 1s ease 1.2s both;
 }
 
@@ -335,7 +336,7 @@ body {
   flex-direction: column;
   padding: 32px;
   border: 1px solid var(--border);
-  background: var(--cream);
+  background: #F5EFE6;
   text-decoration: none;
   transition: all 0.4s ease;
   position: relative;
@@ -362,7 +363,8 @@ body {
 }
   
 .ensaio-desc {
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: 400;
   color: var(--muted);
   line-height: 1.6;
   flex: 1;
@@ -938,7 +940,7 @@ section {
 }
 
 .policy-text {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 300;
   color: var(--muted);
   line-height: 1.8;
@@ -963,7 +965,7 @@ section {
 }
 
 .editing-text p {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
   color: var(--mid);
   line-height: 2;
@@ -976,7 +978,7 @@ section {
 }
 
 .editing-list li {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--mid);
   padding: 10px 0;
   border-bottom: 1px solid var(--border);
@@ -985,7 +987,7 @@ section {
 }
 
 .editing-list li::before {
-  content: '✦';
+  content: '��';
   color: var(--gold);
   font-size: 8px;
   margin-top: 3px;

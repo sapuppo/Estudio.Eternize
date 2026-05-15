@@ -1,7 +1,5 @@
 {
   "/page": "app/page.js",
-  "/familia/page": "app/familia/page.js",
-  "/profissional/page": "app/profissional/page.js",
   "/gestante/page": "app/gestante/page.js",
   "/newborn/page": "app/newborn/page.js"
 }
