@@ -65,7 +65,7 @@ export default function FamiliaPage() {
             <ul className="pkg-features">
               <li className="pkg-feature">20 Fotos digitais editadas</li>
               <li className="pkg-feature">2 Cenários</li>
-              <li className="pkg-feature">Até 6 participantes</li>
+              <li className="pkg-feature">Até 4 participantes</li>
               <li className="pkg-feature">Maquiagem profissional</li>
               <li className="pkg-feature">Modelagem de cabelo</li>
               <li className="pkg-feature">Direcionamento de poses</li>
@@ -91,7 +91,7 @@ export default function FamiliaPage() {
             <ul className="pkg-features">
               <li className="pkg-feature">30 Fotos digitais editadas</li>
               <li className="pkg-feature">3 Cenários</li>
-              <li className="pkg-feature">Até 8 participantes</li>
+              <li className="pkg-feature">Até 4 participantes</li>
               <li className="pkg-feature">Maquiagem profissional</li>
               <li className="pkg-feature">Modelagem de cabelo</li>
               <li className="pkg-feature">Álbum Luxo incluso</li>
