@@ -117,6 +117,18 @@ export default function Nav() {
 
       {/* Mobile Menu Overlay */}
       <div className={`mobile-menu-overlay ${mobileMenuOpen ? "open" : ""}`}>
+        {/* Close Button */}
+        <button 
+          className="mobile-menu-close"
+          onClick={() => setMobileMenuOpen(false)}
+          aria-label="Fechar menu"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        
         <div className="mobile-menu-content">
           <div className="mobile-menu-header">
             <span style={{ fontSize: "10px", letterSpacing: "0.3em", color: "var(--gold)", textTransform: "uppercase" }}>Menu</span>

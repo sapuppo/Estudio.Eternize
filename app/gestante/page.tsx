@@ -3,6 +3,7 @@
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import PageWrapper from "@/components/PageWrapper";
+import PortfolioCarousel from "@/components/PortfolioCarousel";
 
 export default function GestantePage() {
   return (
@@ -22,6 +23,9 @@ export default function GestantePage() {
           <img src="/images/Eternize.svg" alt="Eternize" style={{ height: "120px", width: "auto" }} />
         </div>
       </div>
+
+      {/* PORTFOLIO CAROUSEL */}
+      <PortfolioCarousel title="Nosso Portfólio" subtitle="Gestante" />
 
       {/* GESTANTE PACKAGES */}
       <section className="packages-section">

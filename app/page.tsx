@@ -4,6 +4,7 @@ import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import PageWrapper from "@/components/PageWrapper";
+import PortfolioCarousel from "@/components/PortfolioCarousel";
 
 export default function Home() {
   const ensaios = [
@@ -18,22 +19,7 @@ export default function Home() {
     { name: "Profissional", href: "/profissional", desc: "Posicionamento de imagem" },
   ];
 
-  const portfolioImages = [
-    "/images/portfolio/gestante-1.jpg",
-    "/images/portfolio/gestante-2.jpg",
-    "/images/portfolio/gestante-3.jpg",
-    "/images/portfolio/gestante-4.jpg",
-    "/images/portfolio/gestante-5.jpg",
-    "/images/portfolio/gestante-6.jpg",
-    "/images/portfolio/gestante-7.jpg",
-    "/images/portfolio/gestante-8.jpg",
-    "/images/portfolio/gestante-9.jpg",
-    "/images/portfolio/gestante-10.jpg",
-    "/images/portfolio/gestante-11.jpg",
-    "/images/portfolio/gestante-12.jpg",
-    "/images/portfolio/gestante-13.jpg",
-    "/images/portfolio/gestante-14.jpg",
-  ];
+
 
   return (
     <PageWrapper>
@@ -54,28 +40,7 @@ export default function Home() {
       </div>
 
       {/* PORTFOLIO CAROUSEL */}
-      <section className="portfolio-section">
-        <div className="portfolio-header reveal">
-          <div className="section-label" style={{ color: "var(--gold)" }}>Nosso trabalho</div>
-          <h2 className="section-title" style={{ color: "var(--warm-white)" }}>Portfólio Gestante</h2>
-        </div>
-        
-        <div className="portfolio-carousel">
-          <div className="portfolio-track">
-            {portfolioImages.map((img, index) => (
-              <div key={index} className="portfolio-item">
-                <img src={img} alt={`Ensaio Gestante ${index + 1}`} />
-              </div>
-            ))}
-            {/* Duplicate for infinite scroll effect */}
-            {portfolioImages.map((img, index) => (
-              <div key={`dup-${index}`} className="portfolio-item">
-                <img src={img} alt={`Ensaio Gestante ${index + 1}`} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <PortfolioCarousel />
 
       {/* ENSAIOS GRID */}
       <section className="packages-section">
