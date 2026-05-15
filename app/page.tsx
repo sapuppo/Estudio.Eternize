@@ -32,7 +32,6 @@ export default function Home() {
           <strong>Mês das Mães</strong>
         </div>
         <h1 className="hero-title">Registre<br /><em>cada</em><br />momento</h1>
-        <p className="hero-subtitle">Estúdio Fotográfico — 2026</p>
         <div className="hero-divider"></div>
         <div style={{ marginTop: "32px", animation: "fadeIn 1s ease 1.8s both" }}>
           <img src="/images/Eternize.svg" alt="Eternize" style={{ height: "256px", width: "auto" }} />
