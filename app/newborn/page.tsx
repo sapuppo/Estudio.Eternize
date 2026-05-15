@@ -3,6 +3,7 @@
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import PageWrapper from "@/components/PageWrapper";
+import PortfolioCarousel, { newbornImages } from "@/components/PortfolioCarousel";
 
 export default function NewbornPage() {
   return (
@@ -22,6 +23,13 @@ export default function NewbornPage() {
           <img src="/images/Eternize.svg" alt="Eternize" style={{ height: "120px", width: "auto" }} />
         </div>
       </div>
+
+      {/* PORTFOLIO CAROUSEL */}
+      <PortfolioCarousel 
+        title="Nosso Portfólio" 
+        subtitle="Newborn" 
+        images={newbornImages} 
+      />
 
       {/* NEWBORN PACKAGES */}
       <section className="packages-section">
