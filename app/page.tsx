@@ -96,8 +96,8 @@ export default function Home() {
             <ImageCompare 
               beforeImage="/images/autentico.jpg"
               afterImage="/images/natural.jpg"
-              beforeLabel="Original"
-              afterLabel="Editada"
+              beforeLabel="Antes"
+              afterLabel="Depois"
             />
           </div>
         </div>

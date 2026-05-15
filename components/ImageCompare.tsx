@@ -135,17 +135,18 @@ export default function ImageCompare({
 
       {/* Labels */}
       <span
+        className="image-compare-label before-label"
         style={{
           position: "absolute",
-          bottom: "16px",
-          left: "16px",
-          fontSize: "11px",
+          bottom: "12px",
+          left: "12px",
+          fontSize: "9px",
           fontWeight: 500,
-          letterSpacing: "0.15em",
+          letterSpacing: "0.12em",
           textTransform: "uppercase",
           color: "var(--warm-white)",
           background: "rgba(26,22,18,0.7)",
-          padding: "6px 12px",
+          padding: "4px 8px",
           borderRadius: "2px",
           zIndex: 5,
         }}
@@ -153,17 +154,18 @@ export default function ImageCompare({
         {beforeLabel}
       </span>
       <span
+        className="image-compare-label after-label"
         style={{
           position: "absolute",
-          bottom: "16px",
-          right: "16px",
-          fontSize: "11px",
+          bottom: "12px",
+          right: "12px",
+          fontSize: "9px",
           fontWeight: 500,
-          letterSpacing: "0.15em",
+          letterSpacing: "0.12em",
           textTransform: "uppercase",
           color: "var(--dark)",
           background: "var(--gold)",
-          padding: "6px 12px",
+          padding: "4px 8px",
           borderRadius: "2px",
           zIndex: 5,
         }}

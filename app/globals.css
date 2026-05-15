@@ -225,7 +225,7 @@ body {
   font-size: clamp(72px, 12vw, 140px);
   color: var(--warm-white);
   letter-spacing: -0.02em;
-  line-height: 0.95;
+  line-height: 0.70;
   text-align: center;
   animation: fadeUp 1.2s ease 0.5s both;
 }
@@ -243,6 +243,7 @@ body {
   color: var(--muted);
   text-transform: uppercase;
   margin-top: 36px;
+  text-align: center;
   animation: fadeIn 1s ease 1.2s both;
 }
 
