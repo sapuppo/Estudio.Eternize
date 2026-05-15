@@ -16,15 +16,6 @@ export default function CasalPage() {
         <div className="hero-divider"></div>
       </div>
 
-      {/* GALERIA */}
-      <section className="gallery-section">
-        <div className="gallery-scroll">
-          <div className="gallery-item">
-            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Ensaio%20Casal-ubNw9DM3P3PPykrdAl8Dujb8ADV0q5-cGPnDYYuYKhRPp9BwWiYiMKKKNJPnP.png" alt="Ensaio Casal" />
-          </div>
-        </div>
-      </section>
-
       {/* CASAL PACKAGES */}
       <section className="packages-section">
         <div className="packages-header reveal">

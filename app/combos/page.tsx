@@ -24,10 +24,10 @@ export default function CombosPage() {
       <section className="gallery-section">
         <div className="gallery-scroll">
           <div className="gallery-item">
-            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gestante%20M%C3%AAs%20das%20M%C3%A3es%20(1)-z3NKMEXPiDZlxwFW0sLjOVDnDQ7HrB.png" alt="Combo Gestante" />
+            <img src="/images/Foto-221.jpg" alt="Combo Gestante" />
           </div>
           <div className="gallery-item">
-            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Newborn%20M%C3%AAs%20das%20M%C3%A3es-Z1sS0EHaCLm0dZnggDmYzgJU0RNW7g-cGPnDYYuYKhRPp9BwWiYiMKKKNJPnP.png" alt="Combo Newborn" />
+            <img src="/images/bb.jpg" alt="Combo Newborn" />
           </div>
         </div>
       </section>

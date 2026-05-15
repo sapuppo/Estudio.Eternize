@@ -16,15 +16,6 @@ export default function AniversarioPage() {
         <div className="hero-divider"></div>
       </div>
 
-      {/* GALERIA */}
-      <section className="gallery-section">
-        <div className="gallery-scroll">
-          <div className="gallery-item">
-            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Proposta%20-%202026-JBrlKM8yv6CKFxqyPqRVIwnWmvU7h2-QXmyZZMBQJXKSKNfcjGbsLF3yEBLQb.png" alt="Ensaio Aniversário" />
-          </div>
-        </div>
-      </section>
-
       {/* ANIVERSARIO PACKAGES */}
       <section className="packages-section">
         <div className="packages-header reveal">

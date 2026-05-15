@@ -24,10 +24,13 @@ export default function GestantePage() {
       <section className="gallery-section">
         <div className="gallery-scroll">
           <div className="gallery-item">
-            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gestante%20M%C3%AAs%20das%20M%C3%A3es%20(1)-z3NKMEXPiDZlxwFW0sLjOVDnDQ7HrB.png" alt="Ensaio Gestante 1" />
+            <img src="/images/Foto-221.jpg" alt="Ensaio Gestante 1" />
           </div>
           <div className="gallery-item">
-            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gestante%20M%C3%AAs%20das%20M%C3%A3es%20(2)-QXmyZZMBQJXKSKNfcjGbsLF3yEBLQb.png" alt="Ensaio Gestante 2" />
+            <img src="/images/natural.jpg" alt="Ensaio Gestante 2" />
+          </div>
+          <div className="gallery-item">
+            <img src="/images/autentico.jpg" alt="Ensaio Gestante 3" />
           </div>
         </div>
       </section>

@@ -16,15 +16,6 @@ export default function SmashPage() {
         <div className="hero-divider"></div>
       </div>
 
-      {/* GALERIA */}
-      <section className="gallery-section">
-        <div className="gallery-scroll">
-          <div className="gallery-item">
-            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20Proposta%202026-pnZby029Con42PmMRwtr4lMHpPERWp-zHRnqmLXS1xkixEREJlQhGZTKJKlPl.png" alt="Smash the Cake" />
-          </div>
-        </div>
-      </section>
-
       {/* SMASH PACKAGES */}
       <section className="packages-section">
         <div className="packages-header reveal">

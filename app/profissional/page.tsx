@@ -16,15 +16,6 @@ export default function ProfissionalPage() {
         <div className="hero-divider"></div>
       </div>
 
-      {/* GALERIA */}
-      <section className="gallery-section">
-        <div className="gallery-scroll">
-          <div className="gallery-item">
-            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Ensaio%20Profissional-eJRkusbhSGdSQEz5ERk3gnFqG03fbc-cGPnDYYuYKhRPp9BwWiYiMKKKNJPnP.png" alt="Ensaio Profissional" />
-          </div>
-        </div>
-      </section>
-
       {/* PROFISSIONAL PACKAGES */}
       <section className="packages-section">
         <div className="packages-header reveal">

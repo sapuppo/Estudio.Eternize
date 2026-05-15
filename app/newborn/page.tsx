@@ -24,7 +24,7 @@ export default function NewbornPage() {
       <section className="gallery-section">
         <div className="gallery-scroll">
           <div className="gallery-item">
-            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Newborn%20M%C3%AAs%20das%20M%C3%A3es-Z1sS0EHaCLm0dZnggDmYzgJU0RNW7g-cGPnDYYuYKhRPp9BwWiYiMKKKNJPnP.png" alt="Ensaio Newborn" />
+            <img src="/images/bb.jpg" alt="Ensaio Newborn" />
           </div>
         </div>
       </section>

@@ -20,7 +20,7 @@ export default function RevelacaoPage() {
       <section className="gallery-section">
         <div className="gallery-scroll">
           <div className="gallery-item">
-            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Revelac%CC%A7a%CC%83o%20-Zi2mAHll05HTv1wCTD2oVAJKc8Etok.png" alt="Ensaio Revelação" />
+            <img src="/images/revelacao.png" alt="Ensaio Revelação" />
           </div>
         </div>
       </section>
