@@ -74,29 +74,52 @@ const smashImages = [
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%2824%29-4pujyfbOsN1QlvsL8oMXqJ2pwkwOIQ.jpg",
 ];
 
-// Mixed images for homepage - alternating between gestante, newborn and smash
+// Mixed images for homepage - all gestante, all newborn, and 10 smash photos
 const homepageMixedImages = [
-  // Gestante
+  // All Gestante photos (17 total)
   "/images/portfolio/gestante-1.jpg",
+  "/images/portfolio/gestante-2.jpg",
+  "/images/portfolio/gestante-3.jpg",
+  "/images/portfolio/gestante-4.jpg",
   "/images/portfolio/gestante-5.jpg",
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/gestante%20%281%29-P0ExdbFYIUcaQ6SmdRrJPuYGsgnwUm.jpg",
-  // Newborn
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Newborn%20%288%29-8SzodbPEhUd8qYXK7mXNai4k3FxtaO.jpg",
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Newborn%20%2811%29-n3gtjvRS9HbN4POz42WKcOeYW1vQef.jpg",
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Newborn%20%285%29-MExk8BBEsRwdh2VeWhn8YlwaQaMeOa.jpg",
-  // Smash
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%281%29-3XZtoadxW2GM4xCIniSY0xkUjFISLg.jpg",
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%285%29-vnER8mkwO9U1GikICKr2DeJvIsvq9F.jpg",
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%2815%29-A91zqyhCwDPEELMezaSGcqHQjyPb03.jpg",
-  // More gestante
+  "/images/portfolio/gestante-6.jpg",
+  "/images/portfolio/gestante-7.jpg",
+  "/images/portfolio/gestante-8.jpg",
   "/images/portfolio/gestante-9.jpg",
+  "/images/portfolio/gestante-10.jpg",
+  "/images/portfolio/gestante-11.jpg",
   "/images/portfolio/gestante-12.jpg",
+  "/images/portfolio/gestante-13.jpg",
+  "/images/portfolio/gestante-14.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/gestante%20%281%29-P0ExdbFYIUcaQ6SmdRrJPuYGsgnwUm.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/gestante%20%282%29-8XC64t31fo8ujQgoiN8IEPMijqWSnd.jpg",
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/gestante%20%283%29-5NpYYbH8iZgbsxbX5wqiOnCOXk37Wj.jpg",
-  // More newborn
+  // All Newborn photos (15 total)
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Newborn%20%288%29-8SzodbPEhUd8qYXK7mXNai4k3FxtaO.jpg",
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Newborn%20%2816%29-OAuk7KBZQVKf5UFo3PSAyRz81X0Q5j.jpg",
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Newborn%20%2818%29-JPrcRWDMNANJVH5tffNzhCOkGfcG0M.jpg",
-  // More smash
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/newborn%20%281%29-KsaPsJQELUSjxrjM3uut5AmC7nFV3H.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Newborn%20%2811%29-n3gtjvRS9HbN4POz42WKcOeYW1vQef.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Newborn%20%289%29-vOA11DFOW4zeQfTAW95vFgWiGvAYsf.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Newborn%20%2815%29-FcBaMTAhpWKH9MJ0BTPuL3Rgh7Fy0l.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Newborn%20%2810%29-pIqnmfTp6wa5gNHTHjyJysMsCOmuNs.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Newborn%20%285%29-MExk8BBEsRwdh2VeWhn8YlwaQaMeOa.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Newborn%20%2812%29-FdGwPkk6vMWN9XcGJB0laIuZloMwHx.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Newborn%20%287%29-1P0gkVEE8svKglUVBJYlknGXOa38As.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Newborn%20%2814%29-w2C6jSfl6Nsp42A3BKheb4y2SRQs00.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Newborn%20%286%29-CL79ntp92Eoo5E65K0CF5uIIrV3xpe.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Newborn%20%2813%29-4DrBp9uDGp1FY8eSTs81Qs9bBg650l.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Newborn%20%2817%29-8sCkEIlZdJfQlfXvSBquD8bwELfx1T.jpg",
+  // 10 Smash photos (selected)
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%281%29-3XZtoadxW2GM4xCIniSY0xkUjFISLg.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%285%29-vnER8mkwO9U1GikICKr2DeJvIsvq9F.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%286%29-0sq8mNQo6kazEASBQMYT5EARzpi3mm.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%2810%29-JJZoj7SoP7xUgwf9PWnge4mHupxcgt.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%2811%29-Kd2x2oOyca6FfgINapdBLydVHTDsVH.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%2813%29-xVc9Yjprp721ZBCFRx3yvYvsw7PD3S.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%2815%29-A91zqyhCwDPEELMezaSGcqHQjyPb03.jpg",
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%2821%29-tbtHpsT6N2UaClqINsBStBPgvW3htL.jpg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%2822%29-vTTjisMa0ufBtyGYhKe1NcSWiwqz2u.jpg",
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Smash%20%2824%29-4pujyfbOsN1QlvsL8oMXqJ2pwkwOIQ.jpg",
 ];
 
