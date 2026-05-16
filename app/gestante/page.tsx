@@ -3,7 +3,7 @@
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import PageWrapper from "@/components/PageWrapper";
-import PortfolioCarousel from "@/components/PortfolioCarousel";
+import PortfolioCarousel, { defaultGestanteImages } from "@/components/PortfolioCarousel";
 
 export default function GestantePage() {
   return (
@@ -25,7 +25,7 @@ export default function GestantePage() {
       </div>
 
       {/* PORTFOLIO CAROUSEL */}
-      <PortfolioCarousel title="Nosso Portfólio" subtitle="Gestante" />
+      <PortfolioCarousel title="Nosso Portfólio" subtitle="Gestante" images={defaultGestanteImages} />
 
       {/* GESTANTE PACKAGES */}
       <section className="packages-section">
