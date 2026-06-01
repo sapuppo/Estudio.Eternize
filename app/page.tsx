@@ -28,10 +28,10 @@ export default function Home() {
 
       {/* HERO */}
       <div className="hero">
-        <h1 className="hero-title">Registre<br /><em>cada</em><br /><span style={{ lineHeight: "0.3", display: "inline-block", marginTop: "-0.1em" }}>momento</span></h1>
+        <h1 className="hero-title">Registre<br /><em>cada</em><br /><span style={{ lineHeight: "0.85", display: "inline-block", marginTop: "-0.05em" }}>momento</span></h1>
         <div className="hero-divider"></div>
         <div style={{ marginTop: "32px", animation: "fadeIn 1s ease 1.8s both" }}>
-          <img src="/images/Eternize.svg" alt="Eternize" style={{ height: "256px", width: "auto" }} />
+          <img src="/images/Eternize.svg" alt="Eternize" style={{ height: "120px", width: "auto" }} />
         </div>
       </div>
 
