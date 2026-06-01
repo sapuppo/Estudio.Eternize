@@ -28,10 +28,6 @@ export default function Home() {
 
       {/* HERO */}
       <div className="hero">
-        <div className="hero-badge">
-          <span>Promoção</span>
-          <strong>Mês das Mães</strong>
-        </div>
         <h1 className="hero-title">Registre<br /><em>cada</em><br /><span style={{ lineHeight: "0.3", display: "inline-block", marginTop: "-0.1em" }}>momento</span></h1>
         <div className="hero-divider"></div>
         <div style={{ marginTop: "32px", animation: "fadeIn 1s ease 1.8s both" }}>
@@ -147,7 +143,7 @@ export default function Home() {
           <div className="policy-card reveal">
             <div className="policy-icon">✨</div>
             <div className="policy-title">Sinal de Reserva</div>
-            <p className="policy-text">R$100 de sinal para garantir sua data. O restante é pago no dia do ensaio. Parcelamento em até 12× sem juros disponível.</p>
+            <p className="policy-text">R$100 de sinal para garantir sua data. O restante é pago no dia do ensaio. Parcelamento em até 10× sem juros disponível.</p>
           </div>
         </div>
       </section>

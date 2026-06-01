@@ -45,7 +45,7 @@ export default function FamiliaPage() {
               <li className="pkg-feature">Edição refinada completa</li>
             </ul>
             <div className="pkg-price-main">R$490</div>
-            <div className="pkg-installment">em até 12× sem juros</div>
+            <div className="pkg-installment">em até 10× sem juros</div>
             <div className="pkg-signal">R$100 de sinal para reservar</div>
             <a 
               href="https://api.whatsapp.com/send?phone=5511986991295&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20o%20pacote%20Fam%C3%ADlia%20Essencial." 
@@ -72,7 +72,7 @@ export default function FamiliaPage() {
               <li className="pkg-feature">Edição refinada completa</li>
             </ul>
             <div className="pkg-price-main">R$790</div>
-            <div className="pkg-installment">em até 12× sem juros</div>
+            <div className="pkg-installment">em até 10× sem juros</div>
             <div className="pkg-signal">R$100 de sinal para reservar</div>
             <a 
               href="https://api.whatsapp.com/send?phone=5511986991295&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20o%20pacote%20Fam%C3%ADlia%20Completa." 
@@ -99,7 +99,7 @@ export default function FamiliaPage() {
               <li className="pkg-feature">Edição refinada completa</li>
             </ul>
             <div className="pkg-price-main">R$1.490</div>
-            <div className="pkg-installment">em até 12× sem juros</div>
+            <div className="pkg-installment">em até 10× sem juros</div>
             <div className="pkg-signal">R$100 de sinal para reservar</div>
             <a 
               href="https://api.whatsapp.com/send?phone=5511986991295&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20o%20pacote%20Fam%C3%ADlia%20Premium." 
