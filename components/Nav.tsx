@@ -100,6 +100,7 @@ export default function Nav() {
               ))}
             </div>
           </div>
+          <Link href="/portfolio">Portfólio</Link>
           <Link href="/#politicas">Políticas</Link>
         </div>
 
@@ -149,6 +150,13 @@ export default function Nav() {
           </div>
 
           <div className="mobile-menu-section">
+            <Link 
+              href="/portfolio"
+              className="mobile-menu-link"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Portfólio
+            </Link>
             <Link 
               href="/#politicas"
               className="mobile-menu-link"
