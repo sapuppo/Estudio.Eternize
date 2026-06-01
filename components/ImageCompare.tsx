@@ -16,6 +16,7 @@ export default function ImageCompare({
   afterLabel = "Depois" 
 }: ImageCompareProps) {
   const [sliderPosition, setSliderPosition] = useState(50);
+  const [showDragHint, setShowDragHint] = useState(true);
   const containerRef = useRef<HTMLDivElement>(null);
   const isDragging = useRef(false);
 
@@ -30,6 +31,7 @@ export default function ImageCompare({
 
   const handleMouseDown = () => {
     isDragging.current = true;
+    setShowDragHint(false);
   };
 
   const handleMouseUp = () => {
@@ -42,11 +44,16 @@ export default function ImageCompare({
     }
   };
 
+  const handleTouchStart = () => {
+    setShowDragHint(false);
+  };
+
   const handleTouchMove = (e: React.TouchEvent) => {
     handleMove(e.touches[0].clientX);
   };
 
   const handleClick = (e: React.MouseEvent) => {
+    setShowDragHint(false);
     handleMove(e.clientX);
   };
 
@@ -59,6 +66,7 @@ export default function ImageCompare({
       onMouseLeave={handleMouseUp}
       onClick={handleClick}
       onTouchMove={handleTouchMove}
+      onTouchStart={handleTouchStart}
       style={{
         position: "relative",
         width: "100%",
@@ -106,10 +114,39 @@ export default function ImageCompare({
         }}
       />
 
+      {/* Drag Hint Text */}
+      {showDragHint && (
+        <div
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: `${sliderPosition}%`,
+            transform: "translate(-50%, -100%) translateY(-32px)",
+            background: "rgba(26,22,18,0.85)",
+            color: "var(--warm-white)",
+            padding: "6px 12px",
+            borderRadius: "4px",
+            fontSize: "11px",
+            fontWeight: 500,
+            letterSpacing: "0.1em",
+            textTransform: "uppercase",
+            zIndex: 12,
+            pointerEvents: "none",
+            whiteSpace: "nowrap",
+            animation: "fadeIn 0.5s ease 0.5s both",
+          }}
+        >
+          Arraste
+        </div>
+      )}
+
       {/* Slider Handle */}
       <div
         onMouseDown={handleMouseDown}
-        onTouchStart={handleMouseDown}
+        onTouchStart={(e) => {
+          handleMouseDown();
+          handleTouchStart();
+        }}
         style={{
           position: "absolute",
           top: "50%",

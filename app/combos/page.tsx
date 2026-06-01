@@ -11,10 +11,6 @@ export default function CombosPage() {
 
       {/* HERO */}
       <div className="page-hero">
-        <div className="hero-badge">
-          <span>Promoção</span>
-          <strong>Mês das Mães</strong>
-        </div>
         <h1 className="hero-title">Combos<br /><em>Especiais</em></h1>
         <p className="hero-subtitle">Gestante + Newborn — A experiência completa</p>
         <div className="hero-divider"></div>
@@ -65,7 +61,7 @@ export default function CombosPage() {
             <div className="combo-price-wrap">
               <div className="combo-price-old">R$1.440</div>
               <div className="combo-price">R$1.290</div>
-              <div className="combo-installment">em até 12× sem juros</div>
+              <div className="combo-installment">em até 10× sem juros</div>
               <div className="combo-signal">R$100 de sinal para reservar</div>
               <a 
                 href="https://api.whatsapp.com/send?phone=5511986991295&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20o%20Combo%20Eternize%20(Gestante%20%2B%20Newborn)." 
@@ -107,7 +103,7 @@ export default function CombosPage() {
             <div className="combo-price-wrap">
               <div className="combo-price-old">R$2.690</div>
               <div className="combo-price">R$2.280</div>
-              <div className="combo-installment">em até 12× sem juros</div>
+              <div className="combo-installment">em até 10× sem juros</div>
               <div className="combo-signal">R$100 de sinal para reservar</div>
               <a 
                 href="https://api.whatsapp.com/send?phone=5511986991295&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20o%20Combo%20Eternize%20Luxo%20(Gestante%20%2B%20Newborn)." 

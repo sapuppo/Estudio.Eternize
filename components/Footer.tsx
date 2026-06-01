@@ -4,9 +4,9 @@ export default function Footer() {
   return (
     <section className="footer-cta">
       <h2 className="cta-title reveal">Venha viver<br />essa experiência</h2>
-      <p className="cta-sub reveal">Agende seu ensaio · Mês das Mães 2026</p>
+      <p className="cta-sub reveal">Agende seu ensaio</p>
       <a href="https://api.whatsapp.com/send?phone=5511986991295" target="_blank" className="cta-btn reveal">Reservar minha data</a>
-      <p className="cta-signal reveal">R$100 de sinal · Restante no dia do ensaio · 12× sem juros</p>
+      <p className="cta-signal reveal">R$100 de sinal · Restante no dia do ensaio · 10× sem juros</p>
       <div className="reveal" style={{ marginTop: "40px" }}>
         <img src="/images/Eternize.svg" alt="Eternize" style={{ height: "192px", width: "auto" }} />
       </div>

@@ -12,10 +12,6 @@ export default function NewbornPage() {
 
       {/* HERO */}
       <div className="page-hero">
-        <div className="hero-badge">
-          <span>Promoção</span>
-          <strong>Mês das Mães</strong>
-        </div>
         <h1 className="hero-title">Ensaio<br /><em>Newborn</em></h1>
         <p className="hero-subtitle">Os primeiros dias de vida eternizados</p>
         <div className="hero-divider"></div>
@@ -58,7 +54,7 @@ export default function NewbornPage() {
             </ul>
             <span className="pkg-price-old">R$590</span>
             <div className="pkg-price-main">R$530</div>
-            <div className="pkg-installment">em até 12× sem juros</div>
+            <div className="pkg-installment">em até 10× sem juros</div>
             <div className="pkg-signal">R$100 de sinal para reservar</div>
             <a 
               href="https://api.whatsapp.com/send?phone=5511986991295&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20o%20pacote%20Classic%20Baby%20Newborn." 
@@ -83,7 +79,7 @@ export default function NewbornPage() {
             </ul>
             <span className="pkg-price-old">R$790</span>
             <div className="pkg-price-main">R$710</div>
-            <div className="pkg-installment">em até 12× sem juros</div>
+            <div className="pkg-installment">em até 10× sem juros</div>
             <div className="pkg-signal">R$100 de sinal para reservar</div>
             <a 
               href="https://api.whatsapp.com/send?phone=5511986991295&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20o%20pacote%20Deluxe%20Baby%20Newborn." 
@@ -112,7 +108,7 @@ export default function NewbornPage() {
             </ul>
             <span className="pkg-price-old">R$1.790</span>
             <div className="pkg-price-main">R$1.611</div>
-            <div className="pkg-installment">em até 12× sem juros</div>
+            <div className="pkg-installment">em até 10× sem juros</div>
             <div className="pkg-signal">R$100 de sinal para reservar</div>
             <a 
               href="https://api.whatsapp.com/send?phone=5511986991295&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20o%20pacote%20Premium%20Baby%20Newborn." 
