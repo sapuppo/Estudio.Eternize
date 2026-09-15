@@ -64,6 +64,7 @@ export default function GestantePage() {
 
           {/* DELUXE */}
           <div className="package-card reveal">
+            <div className="pkg-highlight">Mais escolhido</div>
             <div className="pkg-tag">Pacote 02</div>
             <div className="pkg-name">Deluxe</div>
             <div className="pkg-line"></div>
@@ -90,7 +91,6 @@ export default function GestantePage() {
 
           {/* PREMIUM */}
           <div className="package-card reveal">
-            <div className="pkg-highlight">Mais escolhido</div>
             <div className="pkg-tag">Pacote 03</div>
             <div className="pkg-name">Premium</div>
             <div className="pkg-line"></div>
